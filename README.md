@@ -18,3 +18,9 @@ Profilene skal være såkalte baseprofiler for Norge, som er minstekrav. Disse p
 HL7 Norge TSK inviterer til workshop for nasjonale basisprofiler mandag 11. juni. Fokus vil være på profilene for Patient, Practitioner og Organization. Vi ønsker at så mange som mulig som har erfaring med disse profilene, eller har innspill til hva som er viktig i en basisprofil setter av dagen til å delta på workshopen.
 
 Vi vil i forkant sende ut skisser til forslag til hver av profilene, og møtet vil gå gjennom og diskutere disse forslagene. Målet er at profilene sendes på høring rett over sommeren, og deretter blir godkjent som nasjonale basisprofiler.
+
+## Kontaktperson
+
+[Espen Stranger Seland](mailto:Espen.Stranger.Seland@ehelse.no)
+<br/>Teknisk styringskommité, HL7 Norge
+<br/>Direktoratet for e-helse
