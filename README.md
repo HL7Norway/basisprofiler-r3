@@ -26,7 +26,9 @@ Vi anbefaler også lage seg en gratis-konto på [Simplifier.net](https://simplif
 
 ## Wiki
 
-Det finnes en best practice-wiki under utvikling på [git.sarepta.ehelse.no](https://git.sarepta.ehelse.no/utvikling/FHIR/wikis/home).
+Felles wiki finnes [her under best practice](https://github.com/HL7Norway/best-practice/wiki) der vi oppfordrer alle til å bidra. 
+
+Det finnes en også en wiki på [git.sarepta.ehelse.no](https://git.sarepta.ehelse.no/utvikling/FHIR/wikis/home).
 
 ## Kontaktperson
 
