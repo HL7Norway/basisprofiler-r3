@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="no-basis-HumanName" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2018-06-13T12:22:47.269+00:00" />
+  </meta>
+  <url value="ttp://ehelse.no/fhir/StructureDefinition/no-basis-HumanName" />
+  <version value="0.3" />
+  <name value="no-basis-HumanName" />
+  <status value="draft" />
+  <date value="2018-06-13T12:22:46.532Z" />
+  <description value="The Norwegian basis-profile of HumanName adds the concept of middlename." />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="HumanName" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/HumanName" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="HumanName">
+      <path value="HumanName" />
+      <short value="Norwegian human name" />
+      <definition value="Defines the format of norwegian human name according to norwegian regulation (lov om personnavn)." />
+    </element>
+    <element id="HumanName.extension">
+      <path value="HumanName.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="HumanName.extension:middlename">
+      <path value="HumanName.extension" />
+      <sliceName value="middlename" />
+      <short value="Defines a middle name" />
+      <definition value="Defines a middle name as a specific extension as this is widely used in Norwegian names and the given shoul appear before any middle name." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename" />
+      </type>
+    </element>
+    <element id="HumanName.extension:middlename.valueString:valueString">
+      <path value="HumanName.extension.valueString" />
+      <sliceName value="valueString" />
+      <definition value="The middle name of the person.&#xD;&#xA;The middlename should be a norwegian middlename as defined by norwegian regulation (Lov om personnavn)." />
+    </element>
+    <element id="HumanName.family">
+      <path value="HumanName.family" />
+      <definition value="Ref. &quot;lov om personnavn&quot; for further details about Norwegian HumanNames.&#xD;&#xA;&#xD;&#xA;The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father." />
+      <min value="1" />
+    </element>
+    <element id="HumanName.given">
+      <path value="HumanName.given" />
+      <short value="Given names (not always 'first')" />
+      <definition value="Given name. In Norway Given name does not include middlenames according to the regulation for norwegian names. Multiple given names are however legal. Ref. &quot;Lov om personnavn&quot; for further details about Norwegian HumanNames.&#xD;&#xA;" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="HumanName.prefix">
+      <path value="HumanName.prefix" />
+      <short value="Prefix is not used in Norwegian names" />
+      <definition value="This is not a part of official Norwegian names as defined in &quot;lov om personnavn&quot; regulation.&#xD;&#xA;&#xD;&#xA;Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name." />
+      <mustSupport value="false" />
+    </element>
+    <element id="HumanName.suffix">
+      <path value="HumanName.suffix" />
+      <short value="Suffix is not used in Norwegian human names" />
+      <definition value="This is not a part of official Norwegian names as defined in &quot;lov om personnavn&quot; regulation.&#xD;&#xA;&#xD;&#xA;Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name." />
+      <mustSupport value="false" />
+    </element>
+  </differential>
+</StructureDefinition>

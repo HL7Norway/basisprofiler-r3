@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="no-basis-address-official" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2018-06-14T08:03:50.475+00:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-address-official" />
+  <version value="0.1" />
+  <name value="no-basis-address-official" />
+  <title value="no-basis-address-official" />
+  <status value="draft" />
+  <experimental value="false" />
+  <date value="2018-06-14T08:03:49.655Z" />
+  <description value="Defines the concept of an officialy registered address in Norway. Usually this will be the adress registered in &quot;Folkeregisteret&quot; for persons or &quot;Enhetsregisteret&quot; for organizations." />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="datatype" />
+  <context value="Address" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="The concept of an officially registered address" />
+      <definition value="Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in &quot;Folkeregisteret&quot; for persons or &quot;Enhetsregisteret&quot; for organizations." />
+      <max value="1" />
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/no-basis-address-official" />
+    </element>
+    <element id="Extension.value[x]:valueBoolean">
+      <path value="Extension.valueBoolean" />
+      <sliceName value="valueBoolean" />
+      <short value="True or false" />
+      <definition value="True for officially registered addresses, false for other addresses" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <fixedBoolean value="false" />
+    </element>
+  </differential>
+</StructureDefinition>

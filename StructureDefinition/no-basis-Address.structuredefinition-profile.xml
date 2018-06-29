@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="no-basis-Address" />
+  <meta>
+    <versionId value="3" />
+    <lastUpdated value="2018-06-15T13:38:12.872+00:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+  <version value="0.6" />
+  <name value="no-basis-Address" />
+  <title value="no-basis-Address" />
+  <status value="draft" />
+  <date value="2018-06-15T13:38:12.696Z" />
+  <description value="Norwegian basisprofil for Address resource adding Norwegian specific property information, official use of address and further explanation of the use for the data-elements in a Norwegian address." />
+  <purpose value="Norwegian basisprofil for Address resource adding Norwegian specific property information, official use of address and further explanation of the use for the data-elements in a Norwegian address." />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Address" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Address" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Address.extension">
+      <path value="Address.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.extension:eiendomsinformasjon">
+      <path value="Address.extension" />
+      <sliceName value="eiendomsinformasjon" />
+      <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer." />
+      <comment value="real property identification" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation" />
+      </type>
+    </element>
+    <element id="Address.extension:official">
+      <path value="Address.extension" />
+      <sliceName value="official" />
+      <definition value="Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in &quot;Folkeregisteret&quot; for persons or &quot;Enhetsregisteret&quot; for organizations. " />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-address-official" />
+      </type>
+    </element>
+    <element id="Address.use">
+      <path value="Address.use" />
+      <definition value="The purpose of this address.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide.&#xD;&#xA;" />
+    </element>
+    <element id="Address.type">
+      <path value="Address.type" />
+      <definition value="Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide.&#xD;&#xA;" />
+    </element>
+    <element id="Address.city">
+      <path value="Address.city" />
+      <short value="Poststed or city" />
+      <definition value="When a postalcode is given the name of the city must be according to the official list of postalcodes used in Norway.&#xD;&#xA;&#xD;&#xA;The name of the city, town, village or other community or delivery center." />
+      <alias value="by" />
+      <alias value="poststed" />
+    </element>
+    <element id="Address.district">
+      <path value="Address.district" />
+      <short value="name of &quot;kommune&quot;" />
+      <definition value="Name of the county (norwegian &quot;kommune&quot;). If kommune number is required &quot;eiendomsinformasjon&quot; should be used.&#xD;&#xA;&#xD;&#xA;The name of the administrative area (county)." />
+      <alias value="kommune" />
+    </element>
+    <element id="Address.state">
+      <path value="Address.state" />
+      <short value="norwegian &quot;fylke&quot;" />
+      <definition value="Name of the norwegian &quot;fylke&quot;). If fylkes-number is required &quot;eiendomsinformasjon&quot; should be used with koded kommune-number.&#xD;&#xA;&#xD;&#xA;Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (i.e. US 2 letter state codes)." />
+      <alias value="fylke" />
+    </element>
+    <element id="Address.postalCode">
+      <path value="Address.postalCode" />
+      <definition value="A postal code designating a region defined by the postal service.&#xD;&#xA;&#xD;&#xA;In Norway this is af four digit number defined by the norwegian postal service." />
+      <alias value="postnummer" />
+    </element>
+  </differential>
+</StructureDefinition>

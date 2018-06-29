@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="no-basis-middlename" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2018-06-13T12:23:00.348+00:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename" />
+  <version value="0.1" />
+  <name value="no-basis-middlename" />
+  <status value="draft" />
+  <date value="2018-06-13T12:22:59.875Z" />
+  <publisher value="Direktoratet for e-helse" />
+  <description value="Adds concept of middle name to HumanName" />
+  <purpose value="Specific usage of middle name as a specific part of official name standard where name order is important" />
+  <fhirVersion value="3.0.1" />
+  <kind value="primitive-type" />
+  <abstract value="false" />
+  <contextType value="datatype" />
+  <context value="HumanName" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Defines a Norwegian middle name" />
+      <definition value="The middlename should be a Norwegian middlename as defined by Norwegian legislation (Lov om personnavn)." />
+      <max value="1" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename" />
+    </element>
+    <element id="Extension.value[x]:valueString">
+      <path value="Extension.valueString" />
+      <sliceName value="valueString" />
+      <short value="The middlename" />
+      <definition value="The middle name of the person.&#xD;&#xA;The middlename should be a norwegian middlename as defined by norwegian legislation (Lov om personnavn)." />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
