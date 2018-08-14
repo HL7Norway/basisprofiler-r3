@@ -18,7 +18,7 @@ Profilarbeidet er satt opp som [prosjekter](https://github.com/HL7Norway/basepro
 
 ## Publisering
 
-Basisprofilene blit automatisk publisert [her på Simplifer.net](https://simplifier.net/hl7norwayno-basis).
+Basisprofilene blir automatisk publisert [her på Simplifer.net](https://simplifier.net/hl7norwayno-basis).
 
 ## Høring
 
