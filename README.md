@@ -1,8 +1,14 @@
 # Utvikling av HL7 FHIR basisprofiler for Norge
 HL7 FHIR Base profiles for Norway
 
-Dette repoet er nå oppdatert med endringer i profilene som ble diskutert på workshop på Gardermoen 11. juni 2018. 
-Profilene for no-basis-Patient, no-basis-Organization og no-basis-Practitioner er oppdatert. I tillegg til de relevante extensions.
+## Mål
+
+Profilene skal være såkalte basisprofiler for Norge, som er minstekrav. Disse profilene kan brukes direkte, men vil ofte være gjenstand for videre profilering for spesifikke anvendelser og grensesnitt. De vil basere seg på STU3.
+
+## Utvikling
+
+Profilene er straks oppdatert med endringer i profilene som ble diskutert på workshop på Gardermoen 11. juni 2018. 
+Profilene for no-basis-Patient, no-basis-Organization og no-basis-Practitioner er oppdatert, i tillegg til de relevante extensions.
 
 Profilarbeidet er satt opp som [prosjekter](https://github.com/HL7Norway/baseprofiles/projects):
 
@@ -10,15 +16,15 @@ Profilarbeidet er satt opp som [prosjekter](https://github.com/HL7Norway/basepro
 - [Practitioner](https://github.com/HL7Norway/baseprofiles/projects/3)
 - [Organization](https://github.com/HL7Norway/baseprofiles/projects/2)
 
-## Mål
+## Publisering
 
-Profilene skal være såkalte baseprofiler for Norge, som er minstekrav. Disse profilene kan brukes direkte, men vil ofte være gjenstand for videre profilering for spesifikke anvendelser og grensesnitt. De vil basere seg på STU3. 
+Basisprofilene blit automatisk publisert [her på Simplifer.net](https://simplifier.net/hl7norwayno-basis).
 
-## Workshop i regi av HL7 Norge 11. juni 2018 på Gardermoen
+## Høring
 
-HL7 Norge TSK inviterer til workshop for nasjonale basisprofiler mandag 11. juni. Fokus vil være på profilene for Patient, Practitioner og Organization. Vi ønsker at så mange som mulig som har erfaring med disse profilene, eller har innspill til hva som er viktig i en basisprofil setter av dagen til å delta på workshopen.
+Basisprofilene vil bli sendt ut på høring fra HL7 Norge i september 2018. 
 
-Vi vil i forkant sende ut skisser til forslag til hver av profilene, og møtet vil gå gjennom og diskutere disse forslagene. Målet er at profilene sendes på høring rett over sommeren, og deretter blir godkjent som nasjonale basisprofiler.
+Tilbakemeldinger kan dere gjøre allerede nå, enten på epost (se kontaktpersoner under), eller ved å bli medlem av [prosjektet på GitHub](https://github.com/HL7Norway/basisprofiler-r3) og legge det inn som issues, eventuelt lage en egen branch med forslag til endringer. 
 
 ## Verktøy
 
@@ -32,6 +38,9 @@ Felles wiki finnes [her under best practice](https://github.com/HL7Norway/best-p
 Det finnes en også en wiki på [git.sarepta.ehelse.no](https://git.sarepta.ehelse.no/utvikling/FHIR/wikis/home).
 
 ## Kontaktperson
+
+[Thomas Tveit Rosenlund](mailto:thomas.tveit.rosenlund@ehelse.no)
+<br/>Direktoratet for e-helse
 
 [Espen Stranger Seland](mailto:Espen.Stranger.Seland@ehelse.no)
 <br/>Teknisk styringskommité, HL7 Norge
