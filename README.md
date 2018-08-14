@@ -1,7 +1,8 @@
 # Utvikling av HL7 FHIR basisprofiler for Norge
 HL7 FHIR Base profiles for Norway
 
-Dette repoet vil få sitt første innhold før og/eller under workshop for basisprofiler på Gardermoen 11. juni 2018. 
+Dette repoet er nå oppdatert med endringer i profilene som ble diskutert på workshop på Gardermoen 11. juni 2018. 
+Profilene for no-basis-Patient, no-basis-Organization og no-basis-Practitioner er oppdatert. I tillegg til de relevante extensions.
 
 Profilarbeidet er satt opp som [prosjekter](https://github.com/HL7Norway/baseprofiles/projects):
 
