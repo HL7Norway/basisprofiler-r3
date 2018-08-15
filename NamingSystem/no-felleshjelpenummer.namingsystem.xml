@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <NamingSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
     <meta>
-        <versionId value="0.1" />
+        <versionId value="0.2" />
     </meta>
     <name value="Felles hjelpenummer" />
     <status value="draft" />
     <kind value="identifier" />
-    <date value="2018-02-12"/>
+    <date value="2018-08-13"/>
     <publisher value="Direktoratet for e-helse" />
     <responsible value="Norsk helsenett"/>
-    <description value="TODO." />
+    <description value="Felles hjelpenummer is one possible patient identification number administered by Norsk Helsenett. The norwegian felles hjelpenummer is a 11-digit number containing two control digits. The number shoud only be used when the Fødselsnummer and D-number is unknown." />
     <uniqueId>
         <type value="uri" />
         <value value="http://ehelse.no/fhir/NamingSystem/FHNR" />
