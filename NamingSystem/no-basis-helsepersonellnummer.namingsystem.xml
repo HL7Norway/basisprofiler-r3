@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <NamingSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
     <meta>
-        <versionId value="0.1" />
+        <versionId value="0.2" />
     </meta>
     <name value="Helsepersonellregisteret-nummer (HPR-nummer)" />
     <status value="draft" />
     <kind value="identifier" />
-    <date value="2018-02-12"/>
+    <date value="2018-08-13"/>
     <publisher value="Direktoratet for e-helse" />
     <responsible value="Helsedirektoratet"/>
-    <description value="Et fødselsnummer er et ellevesifret identifikasjonsnummer. Alle som er folkeregistrert i Norge har et fødselsnummer." />
+    <description value="In Norway all registered health care personnel is registered in the Helsepersonellregister (HPR) and is assigned a HPR-number that is used to identify the health care practitioner. Health care personnel not registered in HPR can use FNR for identification." />
     <uniqueId>
         <type value="uri" />
         <value value="http://ehelse.no/fhir/NamingSystem/HPR" />

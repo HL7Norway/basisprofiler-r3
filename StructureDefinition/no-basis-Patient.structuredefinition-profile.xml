@@ -5504,6 +5504,588 @@
         <map value="n/a" />
       </mapping>
     </element>
+    <element id="Patient.contact.name.id">
+      <path value="Patient.contact.name.id" />
+      <representation value="xmlAttr" />
+      <short value="xml:id (or equivalent in JSON)" />
+      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <comment value="Note that FHIR strings may not exceed 1MB in size" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.extension">
+      <path value="Patient.contact.name.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional Content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.extension:middlename">
+      <path value="Patient.contact.name.extension" />
+      <sliceName value="middlename" />
+      <short value="Defines a Norwegian middle name" />
+      <definition value="The middlename should be a Norwegian middlename as defined by Norwegian legislation (Lov om personnavn)." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.extension:middlename.id">
+      <path value="Patient.contact.name.extension.id" />
+      <representation value="xmlAttr" />
+      <short value="xml:id (or equivalent in JSON)" />
+      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <comment value="Note that FHIR strings may not exceed 1MB in size" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.extension:middlename.extension">
+      <path value="Patient.contact.name.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional Content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.extension:middlename.url">
+      <path value="Patient.contact.name.extension.url" />
+      <representation value="xmlAttr" />
+      <short value="identifies the meaning of the extension" />
+      <definition value="Source of the definition for the extension code - a logical name or a URL." />
+      <comment value="The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension." />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="Extension.url" />
+        <min value="1" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="uri" />
+      </type>
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.extension:middlename.value[x]:valueString">
+      <path value="Patient.contact.name.extension.valueString" />
+      <sliceName value="valueString" />
+      <short value="The middlename" />
+      <definition value="The middle name of the person.&#xD;&#xA;The middlename should be a norwegian middlename as defined by norwegian regulation (Lov om personnavn)." />
+      <comment value="A stream of bytes, base64 encoded" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Extension.value[x]" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.use">
+      <path value="Patient.contact.name.use" />
+      <short value="usual | official | temp | nickname | anonymous | old | maiden" />
+      <definition value="Identifies the purpose for this name." />
+      <comment value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary or old name etc.for a current/permanent one. Applications can assume that a name is current unless it explicitly says that it is temporary or old." />
+      <requirements value="Allows the appropriate name for a particular context of use to be selected from among a set of names." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="HumanName.use" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isModifier value="true" />
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="NameUse" />
+        </extension>
+        <strength value="required" />
+        <description value="The use of a human name" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/name-use" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="XPN.7, but often indicated by which field contains the name" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="unique(./use)" />
+      </mapping>
+      <mapping>
+        <identity value="servd" />
+        <map value="./NamePurpose" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.text">
+      <path value="Patient.contact.name.text" />
+      <short value="Text representation of the full name" />
+      <definition value="A full text representation of the name." />
+      <comment value="Can provide both a text representation and structured parts." />
+      <requirements value="A renderable, unencoded form." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="HumanName.text" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="implied by XPN.11" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./formatted" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.family">
+      <path value="Patient.contact.name.family" />
+      <short value="Family name (often called 'Surname')" />
+      <definition value="Ref. &quot;lov om personnavn&quot; for further details about Norwegian HumanNames.&#xD;&#xA;&#xD;&#xA;The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father." />
+      <comment value="Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures)." />
+      <alias value="surname" />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="HumanName.family" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="XPN.1/FN.1" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./part[partType = FAM]" />
+      </mapping>
+      <mapping>
+        <identity value="servd" />
+        <map value="./FamilyName" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.given">
+      <path value="Patient.contact.name.given" />
+      <short value="Given names (not always 'first')" />
+      <definition value="Given name. In Norway Given name does not include middlenames according to the regulation for norwegian names. Multiple given names are however legal. Ref. &quot;Lov om personnavn&quot; for further details about Norwegian HumanNames.&#xD;&#xA;" />
+      <comment value="If only initials are recorded, they may be used in place of the full name.  Not called &quot;first name&quot; since given names do not always come first." />
+      <alias value="first name" />
+      <alias value="middle name" />
+      <min value="1" />
+      <max value="1" />
+      <base>
+        <path value="HumanName.given" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <orderMeaning value="Given Names appear in the correct order for presenting the name" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="XPN.2 + XPN.3" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./part[partType = GIV]" />
+      </mapping>
+      <mapping>
+        <identity value="servd" />
+        <map value="./GivenNames" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.prefix">
+      <path value="Patient.contact.name.prefix" />
+      <short value="Prefix is not used in Norwegian names" />
+      <definition value="This is not a part of official Norwegian names as defined in &quot;lov om personnavn&quot; regulation.&#xD;&#xA;&#xD;&#xA;Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name." />
+      <comment value="Note that FHIR strings may not exceed 1MB in size" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="HumanName.prefix" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <orderMeaning value="Prefixes appear in the correct order for presenting the name" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <mustSupport value="false" />
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="XPN.5" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./part[partType = PFX]" />
+      </mapping>
+      <mapping>
+        <identity value="servd" />
+        <map value="./TitleCode" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.suffix">
+      <path value="Patient.contact.name.suffix" />
+      <short value="Suffix is not used in Norwegian human names" />
+      <definition value="This is not a part of official Norwegian names as defined in &quot;lov om personnavn&quot; regulation.&#xD;&#xA;&#xD;&#xA;Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name." />
+      <comment value="Note that FHIR strings may not exceed 1MB in size" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="HumanName.suffix" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <orderMeaning value="Suffixes appear in the correct order for presenting the name" />
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <mustSupport value="false" />
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="XPN/4" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./part[partType = SFX]" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.name.period">
+      <path value="Patient.contact.name.period" />
+      <short value="Time period when name was/is in use" />
+      <definition value="Indicates the period of time when this name was valid for the named person." />
+      <comment value="This is not a duration - that's a measure of time (a separate type), but a duration that occurs at a fixed value of time. A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. &quot;the patient was an inpatient of the hospital for this time range&quot;) or one value from the range applies (e.g. &quot;give to the patient between these two times&quot;). If duration is required, specify the type as Interval|Duration." />
+      <requirements value="Allows names to be placed in historical context." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="HumanName.period" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Period" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="per-1" />
+        <severity value="error" />
+        <human value="If present, start SHALL have a lower value than end" />
+        <expression value="start.empty() or end.empty() or (start &lt;= end)" />
+        <xpath value="not(exists(f:start)) or not(exists(f:end)) or (f:start/@value &lt;= f:end/@value)" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="DR" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="IVL&lt;TS&gt;[lowClosed=&quot;true&quot; and highClosed=&quot;true&quot;] or URG&lt;TS&gt;[lowClosed=&quot;true&quot; and highClosed=&quot;true&quot;]" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="XPN.13 + XPN.14" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./usablePeriod[type=&quot;IVL&lt;TS&gt;&quot;]" />
+      </mapping>
+      <mapping>
+        <identity value="servd" />
+        <map value="./StartDate and ./EndDate" />
+      </mapping>
+    </element>
     <element id="Patient.contact.telecom">
       <path value="Patient.contact.telecom" />
       <short value="A contact detail for the person" />
@@ -5616,6 +6198,682 @@
       <mapping>
         <identity value="cda" />
         <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.address.id">
+      <path value="Patient.contact.address.id" />
+      <representation value="xmlAttr" />
+      <short value="xml:id (or equivalent in JSON)" />
+      <definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." />
+      <comment value="Note that FHIR strings may not exceed 1MB in size" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.id" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.address.extension">
+      <path value="Patient.contact.address.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url" />
+        <rules value="open" />
+      </slicing>
+      <short value="Additional Content defined by implementations" />
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.address.extension:eiendomsinformasjon">
+      <path value="Patient.contact.address.extension" />
+      <sliceName value="eiendomsinformasjon" />
+      <short value="real property identification" />
+      <definition value="Additional information identifying norwegian real property." />
+      <comment value="real property identification" />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.address.extension:official">
+      <path value="Patient.contact.address.extension" />
+      <sliceName value="official" />
+      <short value="The concept of an officially registered address" />
+      <definition value="Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in &quot;Folkeregisteret&quot; for persons or &quot;Enhetsregisteret&quot; for organizations. " />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
+      <alias value="extensions" />
+      <alias value="user content" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Element.extension" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-address-official" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.address.use">
+      <path value="Patient.contact.address.use" />
+      <short value="home | work | temp | old - purpose of this address" />
+      <definition value="The purpose of this address.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide.&#xD;&#xA;" />
+      <comment value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary or old address etc.for a current/permanent one. Applications can assume that an address is current unless it explicitly says that it is temporary or old." />
+      <requirements value="Allows an appropriate address to be chosen from a list of many." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Address.use" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <example>
+        <label value="General" />
+        <valueCode value="home" />
+      </example>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isModifier value="true" />
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="AddressUse" />
+        </extension>
+        <strength value="required" />
+        <description value="The use of an address" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/address-use" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="XAD.7" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="unique(./use)" />
+      </mapping>
+      <mapping>
+        <identity value="servd" />
+        <map value="./AddressPurpose" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.address.type">
+      <path value="Patient.contact.address.type" />
+      <short value="postal | physical | both" />
+      <definition value="Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide.&#xD;&#xA;" />
+      <comment value="Note that FHIR strings may not exceed 1MB in size" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Address.type" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="code" />
+      </type>
+      <example>
+        <label value="General" />
+        <valueCode value="both" />
+      </example>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isSummary value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="AddressType" />
+        </extension>
+        <strength value="required" />
+        <description value="The type of an address (physical / postal)" />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/address-type" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="XAD.18" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="unique(./use)" />
+      </mapping>
+      <mapping>
+        <identity value="vcard" />
+        <map value="address type parameter" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.address.text">
+      <path value="Patient.contact.address.text" />
+      <short value="Text representation of the address" />
+      <definition value="A full text representation of the address." />
+      <comment value="Can provide both a text representation and parts." />
+      <requirements value="A renderable, unencoded form." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Address.text" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <example>
+        <label value="General" />
+        <valueString value="137 Nowhere Street, Erewhon 9132" />
+      </example>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="XAD.1 + XAD.2 + XAD.3 + XAD.4 + XAD.5 + XAD.6" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./formatted" />
+      </mapping>
+      <mapping>
+        <identity value="vcard" />
+        <map value="address label parameter" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.address.line">
+      <path value="Patient.contact.address.line" />
+      <short value="Street name, number, direction &amp; P.O. Box etc." />
+      <definition value="This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information." />
+      <comment value="Note that FHIR strings may not exceed 1MB in size" />
+      <requirements value="home | work | temp | old - purpose of this address." />
+      <min value="0" />
+      <max value="*" />
+      <base>
+        <path value="Address.line" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <orderMeaning value="The order in which lines should appear in an address label" />
+      <example>
+        <label value="General" />
+        <valueString value="137 Nowhere Street" />
+      </example>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="XAD.1 + XAD.2 (note: XAD.1 and XAD.2 have different meanings for a company address than for a person address)" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="AD.part[parttype = AL]" />
+      </mapping>
+      <mapping>
+        <identity value="vcard" />
+        <map value="street" />
+      </mapping>
+      <mapping>
+        <identity value="servd" />
+        <map value="./StreetAddress (newline delimitted)" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.address.city">
+      <path value="Patient.contact.address.city" />
+      <short value="Poststed or city" />
+      <definition value="When a postalcode is given the name of the city must be according to the official list of postalcodes used in Norway.&#xD;&#xA;&#xD;&#xA;The name of the city, town, village or other community or delivery center." />
+      <comment value="Note that FHIR strings may not exceed 1MB in size" />
+      <alias value="Municpality" />
+      <alias value="by" />
+      <alias value="poststed" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Address.city" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <example>
+        <label value="General" />
+        <valueString value="Erewhon" />
+      </example>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="XAD.3" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="AD.part[parttype = CTY]" />
+      </mapping>
+      <mapping>
+        <identity value="vcard" />
+        <map value="locality" />
+      </mapping>
+      <mapping>
+        <identity value="servd" />
+        <map value="./Jurisdiction" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.address.district">
+      <path value="Patient.contact.address.district" />
+      <short value="name of &quot;kommune&quot;" />
+      <definition value="Name of the county (norwegian &quot;kommune&quot;). If kommune number is required &quot;eiendomsinformasjon&quot; should be used.&#xD;&#xA;&#xD;&#xA;The name of the administrative area (county)." />
+      <comment value="District is sometimes known as county, but in some regions 'county' is used in place of city (municipality), so county name should be conveyed in city instead." />
+      <alias value="County" />
+      <alias value="kommune" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Address.district" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <example>
+        <label value="General" />
+        <valueString value="Madison" />
+      </example>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="XAD.9" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="AD.part[parttype = CNT | CPA]" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.address.state">
+      <path value="Patient.contact.address.state" />
+      <short value="norwegian &quot;fylke&quot;" />
+      <definition value="Name of the norwegian &quot;fylke&quot;). If fylkes-number is required &quot;eiendomsinformasjon&quot; should be used with koded kommune-number.&#xD;&#xA;&#xD;&#xA;Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (i.e. US 2 letter state codes)." />
+      <comment value="Note that FHIR strings may not exceed 1MB in size" />
+      <alias value="Province" />
+      <alias value="Territory" />
+      <alias value="fylke" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Address.state" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="XAD.4" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="AD.part[parttype = STA]" />
+      </mapping>
+      <mapping>
+        <identity value="vcard" />
+        <map value="region" />
+      </mapping>
+      <mapping>
+        <identity value="servd" />
+        <map value="./Region" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.address.postalCode">
+      <path value="Patient.contact.address.postalCode" />
+      <short value="Postal code for area" />
+      <definition value="A postal code designating a region defined by the postal service.&#xD;&#xA;&#xD;&#xA;In Norway this is af four digit number defined by the norwegian postal service." />
+      <comment value="Note that FHIR strings may not exceed 1MB in size" />
+      <alias value="Zip" />
+      <alias value="postnummer" />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Address.postalCode" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <example>
+        <label value="General" />
+        <valueString value="9132" />
+      </example>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="XAD.5" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="AD.part[parttype = ZIP]" />
+      </mapping>
+      <mapping>
+        <identity value="vcard" />
+        <map value="code" />
+      </mapping>
+      <mapping>
+        <identity value="servd" />
+        <map value="./PostalIdentificationCode" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.address.country">
+      <path value="Patient.contact.address.country" />
+      <short value="Country (e.g. can be ISO 3166 2 or 3 letter code)" />
+      <definition value="Country - a nation as commonly understood or generally accepted." />
+      <comment value="ISO 3166 3 letter codes can be used in place of a full country name." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Address.country" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="string" />
+      </type>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="XAD.6" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="AD.part[parttype = CNT]" />
+      </mapping>
+      <mapping>
+        <identity value="vcard" />
+        <map value="country" />
+      </mapping>
+      <mapping>
+        <identity value="servd" />
+        <map value="./Country" />
+      </mapping>
+    </element>
+    <element id="Patient.contact.address.period">
+      <path value="Patient.contact.address.period" />
+      <short value="Time period when address was/is in use" />
+      <definition value="Time period when address was/is in use." />
+      <comment value="This is not a duration - that's a measure of time (a separate type), but a duration that occurs at a fixed value of time. A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. &quot;the patient was an inpatient of the hospital for this time range&quot;) or one value from the range applies (e.g. &quot;give to the patient between these two times&quot;). If duration is required, specify the type as Interval|Duration." />
+      <requirements value="Allows addresses to be placed in historical context." />
+      <min value="0" />
+      <max value="1" />
+      <base>
+        <path value="Address.period" />
+        <min value="0" />
+        <max value="1" />
+      </base>
+      <type>
+        <code value="Period" />
+      </type>
+      <example>
+        <label value="General" />
+        <valuePeriod>
+          <start value="2010-03-23" />
+          <end value="2010-07-01" />
+        </valuePeriod>
+      </example>
+      <condition value="ele-1" />
+      <constraint>
+        <key value="ele-1" />
+        <severity value="error" />
+        <human value="All FHIR elements must have a @value or children" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
+        <xpath value="@value|f:*|h:div" />
+      </constraint>
+      <constraint>
+        <key value="per-1" />
+        <severity value="error" />
+        <human value="If present, start SHALL have a lower value than end" />
+        <expression value="start.empty() or end.empty() or (start &lt;= end)" />
+        <xpath value="not(exists(f:start)) or not(exists(f:end)) or (f:start/@value &lt;= f:end/@value)" />
+      </constraint>
+      <isSummary value="true" />
+      <mapping>
+        <identity value="rim" />
+        <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="DR" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="IVL&lt;TS&gt;[lowClosed=&quot;true&quot; and highClosed=&quot;true&quot;] or URG&lt;TS&gt;[lowClosed=&quot;true&quot; and highClosed=&quot;true&quot;]" />
+      </mapping>
+      <mapping>
+        <identity value="v2" />
+        <map value="XAD.12 / XAD.13 + XAD.14" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="./usablePeriod[type=&quot;IVL&lt;TS&gt;&quot;]" />
+      </mapping>
+      <mapping>
+        <identity value="servd" />
+        <map value="./StartDate and ./EndDate" />
       </mapping>
     </element>
     <element id="Patient.contact.gender">
@@ -6968,12 +8226,23 @@
         <profile value="ttp://ehelse.no/fhir/StructureDefinition/no-basis-HumanName" />
       </type>
     </element>
+    <element id="Patient.contact.name.extension:middlename">
+      <path value="Patient.contact.name.extension" />
+      <sliceName value="middlename" />
+      <short value="Defines a Norwegian middle name" />
+      <definition value="The middlename should be a Norwegian middlename as defined by Norwegian legislation (Lov om personnavn)." />
+    </element>
     <element id="Patient.contact.address">
       <path value="Patient.contact.address" />
       <type>
         <code value="Address" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
       </type>
+    </element>
+    <element id="Patient.contact.address.extension:eiendomsinformasjon">
+      <path value="Patient.contact.address.extension" />
+      <sliceName value="eiendomsinformasjon" />
+      <definition value="Additional information identifying norwegian real property." />
     </element>
   </differential>
 </StructureDefinition>
