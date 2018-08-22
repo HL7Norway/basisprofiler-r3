@@ -3248,6 +3248,7 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="HNR" />
       <example>
         <label value="General" />
         <valueUri value="http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the Identifier.value itself is a full uri" />
@@ -4543,7 +4544,7 @@
     <element id="Patient.address.use">
       <path value="Patient.address.use" />
       <short value="home | work | temp | old - purpose of this address" />
-      <definition value="The purpose of this address.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide.&#xD;&#xA;" />
+      <definition value="The purpose of this address.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide. In general the address used for visiting the person should have use &quot;home&quot; and type &quot;physical&quot; or &quot;both&quot;. The &quot;official&quot; flag can be either true or false.&#xD;&#xA;" />
       <comment value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary or old address etc.for a current/permanent one. Applications can assume that an address is current unless it explicitly says that it is temporary or old." />
       <requirements value="Allows an appropriate address to be chosen from a list of many." />
       <min value="0" />
@@ -4600,7 +4601,7 @@
     <element id="Patient.address.type">
       <path value="Patient.address.type" />
       <short value="postal | physical | both" />
-      <definition value="Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide.&#xD;&#xA;" />
+      <definition value="Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide. In general the address used for visiting the person should have use &quot;home&quot; and type &quot;physical&quot; or &quot;both&quot;. The &quot;official&quot; flag can be either true or false.&#xD;&#xA;" />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
       <min value="0" />
       <max value="1" />
@@ -6367,7 +6368,7 @@
     <element id="Patient.contact.address.use">
       <path value="Patient.contact.address.use" />
       <short value="home | work | temp | old - purpose of this address" />
-      <definition value="The purpose of this address.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide.&#xD;&#xA;" />
+      <definition value="The purpose of this address.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide. In general the address used for visiting the person should have use &quot;home&quot; and type &quot;physical&quot; or &quot;both&quot;. The &quot;official&quot; flag can be either true or false.&#xD;&#xA;" />
       <comment value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary or old address etc.for a current/permanent one. Applications can assume that an address is current unless it explicitly says that it is temporary or old." />
       <requirements value="Allows an appropriate address to be chosen from a list of many." />
       <min value="0" />
@@ -6424,7 +6425,7 @@
     <element id="Patient.contact.address.type">
       <path value="Patient.contact.address.type" />
       <short value="postal | physical | both" />
-      <definition value="Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide.&#xD;&#xA;" />
+      <definition value="Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide. In general the address used for visiting the person should have use &quot;home&quot; and type &quot;physical&quot; or &quot;both&quot;. The &quot;official&quot; flag can be either true or false.&#xD;&#xA;" />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
       <min value="0" />
       <max value="1" />
@@ -8181,6 +8182,10 @@
       <definition value="The code for local Hjelpenummer in the CodeSystem&#xD;&#xA;&#xD;&#xA;A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <min value="1" />
       <fixedCode value="HNR" />
+    </element>
+    <element id="Patient.identifier:HNR.system">
+      <path value="Patient.identifier.system" />
+      <fixedUri value="HNR" />
     </element>
     <element id="Patient.identifier:HNR.value">
       <path value="Patient.identifier.value" />

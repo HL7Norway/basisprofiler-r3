@@ -224,7 +224,7 @@
     <element id="Address.use">
       <path value="Address.use" />
       <short value="home | work | temp | old - purpose of this address" />
-      <definition value="The purpose of this address.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide.&#xD;&#xA;" />
+      <definition value="The purpose of this address.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide. In general the address used for visiting the person should have use &quot;home&quot; and type &quot;physical&quot; or &quot;both&quot;. The &quot;official&quot; flag can be either true or false.&#xD;&#xA;" />
       <comment value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary or old address etc.for a current/permanent one. Applications can assume that an address is current unless it explicitly says that it is temporary or old." />
       <requirements value="Allows an appropriate address to be chosen from a list of many." />
       <min value="0" />
@@ -281,7 +281,7 @@
     <element id="Address.type">
       <path value="Address.type" />
       <short value="postal | physical | both" />
-      <definition value="Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide.&#xD;&#xA;" />
+      <definition value="Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide. In general the address used for visiting the person should have use &quot;home&quot; and type &quot;physical&quot; or &quot;both&quot;. The &quot;official&quot; flag can be either true or false.&#xD;&#xA;" />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
       <min value="0" />
       <max value="1" />
@@ -766,11 +766,11 @@
     </element>
     <element id="Address.use">
       <path value="Address.use" />
-      <definition value="The purpose of this address.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide.&#xD;&#xA;" />
+      <definition value="The purpose of this address.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide. In general the address used for visiting the person should have use &quot;home&quot; and type &quot;physical&quot; or &quot;both&quot;. The &quot;official&quot; flag can be either true or false.&#xD;&#xA;" />
     </element>
     <element id="Address.type">
       <path value="Address.type" />
-      <definition value="Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide.&#xD;&#xA;" />
+      <definition value="Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide. In general the address used for visiting the person should have use &quot;home&quot; and type &quot;physical&quot; or &quot;both&quot;. The &quot;official&quot; flag can be either true or false.&#xD;&#xA;" />
     </element>
     <element id="Address.city">
       <path value="Address.city" />
