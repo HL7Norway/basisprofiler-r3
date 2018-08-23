@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-basis-address-official" />
   <meta>
@@ -51,7 +51,6 @@
       <type>
         <code value="boolean" />
       </type>
-      <fixedBoolean value="false" />
     </element>
   </differential>
 </StructureDefinition>
