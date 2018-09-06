@@ -135,9 +135,9 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Address.extension:eiendomsinformasjon">
+    <element id="Address.extension:propertyinformation">
       <path value="Address.extension" />
-      <sliceName value="eiendomsinformasjon" />
+      <sliceName value="propertyinformation" />
       <short value="real property identification" />
       <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer." />
       <comment value="real property identification" />
@@ -745,9 +745,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Address.extension:eiendomsinformasjon">
+    <element id="Address.extension:propertyinformation">
       <path value="Address.extension" />
-      <sliceName value="eiendomsinformasjon" />
+      <sliceName value="propertyinformation" />
       <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer." />
       <comment value="real property identification" />
       <type>

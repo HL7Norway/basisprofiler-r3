@@ -141,6 +141,7 @@
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
+      <alias value="mellomnavn" />
       <min value="0" />
       <max value="1" />
       <base>
@@ -418,6 +419,7 @@
       <definition value="Ref. &quot;lov om personnavn&quot; for further details about Norwegian HumanNames.&#xD;&#xA;&#xD;&#xA;The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father." />
       <comment value="Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures)." />
       <alias value="surname" />
+      <alias value="etternavn" />
       <min value="1" />
       <max value="1" />
       <base>
@@ -461,6 +463,7 @@
       <comment value="If only initials are recorded, they may be used in place of the full name.  Not called &quot;first name&quot; since given names do not always come first." />
       <alias value="first name" />
       <alias value="middle name" />
+      <alias value="fornavn" />
       <min value="1" />
       <max value="1" />
       <base>
@@ -659,6 +662,7 @@
       <sliceName value="middlename" />
       <short value="Defines a middle name" />
       <definition value="Defines a middle name as a specific extension as this is widely used in Norwegian names and the given shoul appear before any middle name." />
+      <alias value="mellomnavn" />
       <type>
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename" />
@@ -672,12 +676,14 @@
     <element id="HumanName.family">
       <path value="HumanName.family" />
       <definition value="Ref. &quot;lov om personnavn&quot; for further details about Norwegian HumanNames.&#xD;&#xA;&#xD;&#xA;The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father." />
+      <alias value="etternavn" />
       <min value="1" />
     </element>
     <element id="HumanName.given">
       <path value="HumanName.given" />
       <short value="Given names (not always 'first')" />
       <definition value="Given name. In Norway Given name does not include middlenames according to the regulation for norwegian names. Multiple given names are however legal. Ref. &quot;Lov om personnavn&quot; for further details about Norwegian HumanNames.&#xD;&#xA;" />
+      <alias value="fornavn" />
       <min value="1" />
       <max value="1" />
     </element>
