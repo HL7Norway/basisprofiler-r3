@@ -175,9 +175,11 @@
     <element id="Extension.value[x]:valueCoding">
       <path value="Extension.valueCoding" />
       <sliceName value="valueCoding" />
-      <short value="Bydel information" />
+      <short value="Urban District information" />
       <definition value="The name and number of the bydel (part of the city). If coded this information should be coded according to CodeSystem urn:uri:2.16.578.1.12.4.1.1.3403" />
       <comment value="A stream of bytes, base64 encoded" />
+      <alias value="Urban District" />
+      <alias value="bydel" />
       <min value="0" />
       <max value="1" />
       <base>
@@ -290,8 +292,8 @@
     </element>
     <element id="Extension.value[x]:valueCoding.system">
       <path value="Extension.valueCoding.system" />
-      <short value="Identity of the terminology system for bydel" />
-      <definition value="If coded this information should be coded according to CodeSystem urn:uri:2.16.578.1.12.4.1.1.3403" />
+      <short value="Identity of the terminology system for urban district" />
+      <definition value="If coded this information should be coded according to CodeSystem urn:uri:2.16.578.1.12.4.1.1.3403&#xD;&#xA;Urban district codes are officially maintained by SSB." />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
       <min value="0" />
@@ -375,7 +377,7 @@
     <element id="Extension.value[x]:valueCoding.code">
       <path value="Extension.valueCoding.code" />
       <short value="Bydelskode" />
-      <definition value="Predefined code for bydel as defined in urn:uri:2.16.578.1.12.4.1.1.3403" />
+      <definition value="Predefined code for urban district as defined in urn:uri:2.16.578.1.12.4.1.1.3403" />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
       <min value="0" />
@@ -419,8 +421,8 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Extension.valueCoding.display" />
-      <short value="The name of the bydel" />
-      <definition value="The official name of the bydel as defined in urn:uri:2.16.578.1.12.4.1.1.3403" />
+      <short value="The name of the urban district" />
+      <definition value="The official name of the urban district as defined in urn:uri:2.16.578.1.12.4.1.1.3403" />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
       <min value="1" />
@@ -515,8 +517,10 @@
     <element id="Extension.value[x]:valueCoding">
       <path value="Extension.valueCoding" />
       <sliceName value="valueCoding" />
-      <short value="Bydel information" />
+      <short value="Urban District information" />
       <definition value="The name and number of the bydel (part of the city). If coded this information should be coded according to CodeSystem urn:uri:2.16.578.1.12.4.1.1.3403" />
+      <alias value="Urban District" />
+      <alias value="bydel" />
       <type>
         <code value="Coding" />
       </type>
@@ -528,22 +532,22 @@
     </element>
     <element id="Extension.value[x]:valueCoding.system">
       <path value="Extension.valueCoding.system" />
-      <short value="Identity of the terminology system for bydel" />
-      <definition value="If coded this information should be coded according to CodeSystem urn:uri:2.16.578.1.12.4.1.1.3403" />
+      <short value="Identity of the terminology system for urban district" />
+      <definition value="If coded this information should be coded according to CodeSystem urn:uri:2.16.578.1.12.4.1.1.3403&#xD;&#xA;Urban district codes are officially maintained by SSB." />
       <fixedUri value="urn:uri:2.16.578.1.12.4.1.1.3403" />
     </element>
     <element id="Extension.value[x]:valueCoding.code">
       <path value="Extension.valueCoding.code" />
       <short value="Bydelskode" />
-      <definition value="Predefined code for bydel as defined in urn:uri:2.16.578.1.12.4.1.1.3403" />
+      <definition value="Predefined code for urban district as defined in urn:uri:2.16.578.1.12.4.1.1.3403" />
     </element>
     <element id="Extension.value[x]:valueCoding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Extension.valueCoding.display" />
-      <short value="The name of the bydel" />
-      <definition value="The official name of the bydel as defined in urn:uri:2.16.578.1.12.4.1.1.3403" />
+      <short value="The name of the urban district" />
+      <definition value="The official name of the urban district as defined in urn:uri:2.16.578.1.12.4.1.1.3403" />
       <min value="1" />
     </element>
   </differential>
