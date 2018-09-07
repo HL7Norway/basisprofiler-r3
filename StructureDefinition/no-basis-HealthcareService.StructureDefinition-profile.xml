@@ -1488,7 +1488,7 @@
     <element id="HealthcareService.type">
       <path value="HealthcareService.type" />
       <short value="Service type" />
-      <definition value="The specific type defined in a codesystem allowed in the valueset." />
+      <definition value="The specific type defined in a codesystem allowed included in the valueset." />
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
       <alias value="service type" />
       <alias value="tjenestetype" />
@@ -1517,7 +1517,7 @@
           <valueString value="service-type" />
         </extension>
         <strength value="extensible" />
-        <description value="Tjenestetype from CodeSystems" />
+        <description value="Tjenestetype CodeSystems" />
         <valueSetReference>
           <reference value="http://ehelse.no/fhir/ValueSet/no-basis-service-type" />
         </valueSetReference>
@@ -2876,7 +2876,7 @@
     <element id="HealthcareService.type">
       <path value="HealthcareService.type" />
       <short value="Service type" />
-      <definition value="The specific type defined in a codesystem allowed in the valueset." />
+      <definition value="The specific type defined in a codesystem allowed included in the valueset." />
       <alias value="tjenestetype" />
       <mustSupport value="true" />
       <binding>
@@ -2884,7 +2884,7 @@
           <valueString value="service-type" />
         </extension>
         <strength value="extensible" />
-        <description value="Tjenestetype from CodeSystems" />
+        <description value="Tjenestetype CodeSystems" />
         <valueSetReference>
           <reference value="http://ehelse.no/fhir/ValueSet/no-basis-service-type" />
         </valueSetReference>
