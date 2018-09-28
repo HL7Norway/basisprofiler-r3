@@ -22,7 +22,7 @@
     </uniqueId>
     <uniqueId>
 		<type value="uri"/>
-		<value value="urn:uri:2.16.578.1.12.4.1.1.3403"/>
+		<value value="urn:oid:2.16.578.1.12.4.1.1.3403"/>
 		<preferred value="false"/>
 	</uniqueId>
 </NamingSystem>
