@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://example.org/fhir/StructureDefinition/no-basis-MedicationRequest" />
+  <name value="no-basis-MedicationRequest" />
+  <status value="draft" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationRequest" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="MedicationRequest.identifier">
+      <path value="MedicationRequest.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type.text" />
+        </discriminator>
+        <ordered value="true" />
+        <rules value="openAtEnd" />
+      </slicing>
+    </element>
+    <element id="MedicationRequest.identifier:PLL-id">
+      <path value="MedicationRequest.identifier" />
+      <sliceName value="PLL-id" />
+      <max value="1" />
+    </element>
+    <element id="MedicationRequest.identifier:PLL-id.type">
+      <path value="MedicationRequest.identifier.type" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.identifier:PLL-id.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="MedicationRequest.identifier.type.text" />
+      <min value="1" />
+      <fixedString value="PLL" />
+    </element>
+    <element id="MedicationRequest.identifier:PLL-id.system">
+      <path value="MedicationRequest.identifier.system" />
+      <max value="0" />
+    </element>
+    <element id="MedicationRequest.identifier:PLL-id.value">
+      <path value="MedicationRequest.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.identifier:PLL-id.period">
+      <path value="MedicationRequest.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="MedicationRequest.identifier:PLL-id.assigner">
+      <path value="MedicationRequest.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="MedicationRequest.status">
+      <path value="MedicationRequest.status" />
+      <definition value="A code specifying the current state of the order.  Generally this will be active or completed state.&#xD;&#xA;active = start date has passed and end date is not reached&#xD;&#xA;completed = end date is passed (for treatement that had an initial stop date)&#xD;&#xA;entered-in-error = deleted (ref Norwegian laws)&#xD;&#xA;intended = start date is not reached&#xD;&#xA;stopped = end date is passed and it was an active desition to stop the treatment&#xD;&#xA;on-hold = the treatment is paused" />
+    </element>
+    <element id="MedicationRequest.medication[x]">
+      <path value="MedicationRequest.medication[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Medication" />
+        <aggregation value="bundled" />
+      </type>
+    </element>
+    <element id="MedicationRequest.subject">
+      <path value="MedicationRequest.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Patient" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

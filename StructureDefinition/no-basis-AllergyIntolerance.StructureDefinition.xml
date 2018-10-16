@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://example.org/fhir/StructureDefinition/no-basis-AllergyIntolerance" />
+  <name value="no-basis-AllergyIntolerance" />
+  <status value="draft" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="AllergyIntolerance" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="AllergyIntolerance.extension">
+      <path value="AllergyIntolerance.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="AllergyIntolerance.extension:certainty">
+      <path value="AllergyIntolerance.extension" />
+      <sliceName value="certainty" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Certainty" />
+      </type>
+    </element>
+    <element id="AllergyIntolerance.extension:sourceOfInformation">
+      <path value="AllergyIntolerance.extension" />
+      <sliceName value="sourceOfInformation" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-SourceOfInformation" />
+      </type>
+    </element>
+    <element id="AllergyIntolerance.verificationStatus">
+      <path value="AllergyIntolerance.verificationStatus" />
+      <definition value="Assertion about certainty associated with the propensity, or potential risk, of a reaction to the identified substance (including pharmaceutical product).&#xD;&#xA;&#xD;&#xA;Only the values &quot;confirmed&quot; and &quot;refuted&quot; are used. The availeble values are differnt from Norwegian stadard values. Certainty is used to identify the norwegian values." />
+    </element>
+    <element id="AllergyIntolerance.patient">
+      <path value="AllergyIntolerance.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Patient" />
+      </type>
+    </element>
+    <element id="AllergyIntolerance.reaction">
+      <path value="AllergyIntolerance.reaction" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.substance">
+      <path value="AllergyIntolerance.reaction.substance" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.substance.coding">
+      <path value="AllergyIntolerance.reaction.substance.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="AllergyIntolerance.reaction.substance.coding:ATC">
+      <path value="AllergyIntolerance.reaction.substance.coding" />
+      <sliceName value="ATC" />
+      <max value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.substance.coding:ATC.system">
+      <path value="AllergyIntolerance.reaction.substance.coding.system" />
+      <fixedUri value="http://www.whocc.no/atc" />
+    </element>
+    <element id="AllergyIntolerance.reaction.substance.coding:FestSubstance">
+      <path value="AllergyIntolerance.reaction.substance.coding" />
+      <sliceName value="FestSubstance" />
+      <max value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.substance.coding:FestSubstance.system">
+      <path value="AllergyIntolerance.reaction.substance.coding.system" />
+      <fixedUri value="http://ehelse.no/FESTSubstance" />
+    </element>
+    <element id="AllergyIntolerance.reaction.substance.coding:FestMedication">
+      <path value="AllergyIntolerance.reaction.substance.coding" />
+      <sliceName value="FestMedication" />
+      <max value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.substance.coding:FestMedication.system">
+      <path value="AllergyIntolerance.reaction.substance.coding.system" />
+      <fixedUri value="http://ehelse.no/FESTMedication" />
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation.coding">
+      <path value="AllergyIntolerance.reaction.manifestation.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation.coding.system">
+      <path value="AllergyIntolerance.reaction.manifestation.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://ehelse.no/volven/7497" />
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation.coding.code">
+      <path value="AllergyIntolerance.reaction.manifestation.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="AllergyIntolerance.reaction.manifestation.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.severity">
+      <path value="AllergyIntolerance.reaction.severity" />
+      <definition value="Clinical assessment of the severity of the reaction event as a whole, potentially considering multiple different manifestations. Mapping to KI standard  is Severe=Alvorlig. Moderate=Mild=Mindre alvorlig. " />
+    </element>
+  </differential>
+</StructureDefinition>
