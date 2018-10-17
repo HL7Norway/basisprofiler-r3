@@ -5,6 +5,8 @@ HL7 FHIR Base profiles for Norway
 
 Profilene skal være såkalte basisprofiler for Norge, som er minstekrav. Disse profilene kan brukes direkte, men vil ofte være gjenstand for videre profilering for spesifikke anvendelser og grensesnitt. De vil basere seg på STU3.
 
+Se [prinsipper for basisprofiler i wiki'en](https://github.com/HL7Norway/best-practice/wiki/Prinsipper-for-basisprofiler).
+
 ## Ferdige profiler
 
 Følgende profiler er ferdige og venter på endelig godkjenning og endring av status fra "draft" til "final":
