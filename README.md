@@ -5,26 +5,31 @@ HL7 FHIR Base profiles for Norway
 
 Profilene skal være såkalte basisprofiler for Norge, som er minstekrav. Disse profilene kan brukes direkte, men vil ofte være gjenstand for videre profilering for spesifikke anvendelser og grensesnitt. De vil basere seg på STU3.
 
-## Utvikling
+## Ferdige profiler
 
-Profilene er straks oppdatert med endringer i profilene som ble diskutert på workshop på Gardermoen 11. juni 2018. 
-Profilene for no-basis-Patient, no-basis-Organization og no-basis-Practitioner er oppdatert, i tillegg til de relevante extensions.
-
-Profilarbeidet er satt opp som [prosjekter](https://github.com/HL7Norway/baseprofiles/projects):
-
-- [Patient](https://github.com/HL7Norway/baseprofiles/projects/1)
-- [Practitioner](https://github.com/HL7Norway/baseprofiles/projects/3)
-- [Organization](https://github.com/HL7Norway/baseprofiles/projects/2)
+Følgende profiler er ferdige og venter på endelig godkjenning og endring av status fra "draft" til "final":
+* no-basis-Patient
+* no-basis-Organization
+* no-basis-Practitioner
+* Tilhørende typer og extensions, slik som Address, HumanName
 
 ## Publisering
 
 Basisprofilene blir automatisk publisert [her på Simplifer.net](https://simplifier.net/hl7norwayno-basis).
 
-## Høring
+## Høring 
 
-Basisprofilene vil bli sendt ut på høring fra HL7 Norge i september 2018. 
+Tilbakemeldinger kan skje, enten på epost (se kontaktpersoner under), eller ved å bli medlem av [prosjektet på GitHub](https://github.com/HL7Norway/basisprofiler-r3) og legge det inn som issues, eventuelt lage en egen branch med forslag til endringer. Det er mulig å legge inn issues uten å være medlem av git'en. 
 
-Tilbakemeldinger kan dere gjøre allerede nå, enten på epost (se kontaktpersoner under), eller ved å bli medlem av [prosjektet på GitHub](https://github.com/HL7Norway/basisprofiler-r3) og legge det inn som issues, eventuelt lage en egen branch med forslag til endringer. 
+## Neste workshop: Medication++
+
+Workshop på Gardermoen 23. oktober 2018 konsentrerer seg om
+* Medication
+* MedicationStatement
+* Substance
+* AllergyIntolerance
+
+Førsteutkast ligger i [branch emergingprofiles](https://github.com/HL7Norway/basisprofiler-r3/tree/emergingprofiles)
 
 ## Verktøy
 
@@ -37,7 +42,7 @@ Felles wiki finnes [her under best practice](https://github.com/HL7Norway/best-p
 
 Det finnes en også en wiki på [git.sarepta.ehelse.no](https://git.sarepta.ehelse.no/utvikling/FHIR/wikis/home).
 
-## Kontaktperson
+## Kontaktpersoner
 
 [Thomas Tveit Rosenlund](mailto:thomas.tveit.rosenlund@ehelse.no)
 <br/>Direktoratet for e-helse
