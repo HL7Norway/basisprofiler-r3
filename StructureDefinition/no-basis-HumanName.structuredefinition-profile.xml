@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-basis-HumanName" />
   <meta>
     <versionId value="1" />
     <lastUpdated value="2018-06-13T12:22:47.269+00:00" />
   </meta>
-  <url value="ttp://ehelse.no/fhir/StructureDefinition/no-basis-HumanName" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-HumanName" />
   <version value="0.3" />
   <name value="no-basis-HumanName" />
   <status value="draft" />
