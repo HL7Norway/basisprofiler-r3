@@ -14,8 +14,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
+      <short value="Source of information for Allergy intolerance" />
+      <definition value="Extention to support national KI standard. " />
       <base>
         <path value="Element" />
         <min value="0" />
