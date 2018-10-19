@@ -10,6 +10,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Medication" />
   <derivation value="constraint" />
   <differential>
+    <element id="Medication">
+      <path value="Medication" />
+      <definition value="This resource is primarily used for the identification and definition of a medication. It covers the ingredients and the packaging for a medication.&#xD;&#xA;&#xD;&#xA;The resource has been changed to support norwegian FEST. The following changes are done:&#xD;&#xA;- it is required to use a code identifying the medication in FEST. Special use when medication not present in FEST.&#xD;&#xA;- ATC is a prefered code and should allways be identied if medication is present in FEST.&#xD;&#xA;- isBrand is a required filed. &#xD;&#xA;- form is required and will follow norwegian codingsystem&#xD;&#xA;- the profile is extended with no-basis-Prescriptiongroup&#xD;&#xA;" />
+    </element>
     <element id="Medication.extension">
       <path value="Medication.extension" />
       <slicing>
@@ -20,23 +24,15 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Medication.extension:Prescriptiongroup">
+    <element id="Medication.extension:prescriptionGroup">
       <path value="Medication.extension" />
-      <sliceName value="Prescriptiongroup" />
-      <short value="Prescriptiongroup" />
-      <definition value="Valid values are: A, B, C, F, C/F, K. " />
+      <sliceName value="prescriptionGroup" />
       <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/Prescriptiongroup" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Prescriptiongroup" />
       </type>
-    </element>
-    <element id="Medication.extension:Prescriptiongroup.extension:Code">
-      <path value="Medication.extension.extension" />
-      <sliceName value="Code" />
-      <min value="1" />
-      <max value="1" />
     </element>
     <element id="Medication.code">
       <path value="Medication.code" />
@@ -98,7 +94,7 @@
     <element id="Medication.form">
       <path value="Medication.form" />
       <short value="Code from volven 7448" />
-      <definition value="Code as defined in " />
+      <definition value="Code as defined in" />
       <min value="1" />
     </element>
     <element id="Medication.form.coding">

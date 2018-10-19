@@ -10,6 +10,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
   <derivation value="constraint" />
   <differential>
+    <element id="MedicationStatement">
+      <path value="MedicationStatement" />
+      <definition value="A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now, or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains &#xD;&#xA;&#xD;&#xA;Norwegian profile: &#xD;&#xA;no-basis-Medication statement is the basic profile for communicating what the patient is using, has been using og plan to use. To be used in PLL and similar resources that communicate information about medication use. The profile has the following changes from MedicationStatement:&#xD;&#xA;- PLL-id is added as an identifier&#xD;&#xA;- reference to no-basis-medication is added and should be used as prefered reference. &#xD;&#xA;- reference to no-basis-patient is added (subject) and should be used as prefered reference.&#xD;&#xA;- ICPC2 and ICD10 is added as prefered reasonCode. &#xD;&#xA;&#xD;&#xD;" />
+    </element>
     <element id="MedicationStatement.identifier">
       <path value="MedicationStatement.identifier" />
       <slicing>

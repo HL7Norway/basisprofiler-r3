@@ -10,6 +10,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Substance" />
   <derivation value="constraint" />
   <differential>
+    <element id="Substance">
+      <path value="Substance" />
+      <definition value="A homogeneous material with a definite composition.&#xD;&#xA;&#xD;&#xA;The profile is adapted to use FEST information for coding the substance. " />
+    </element>
     <element id="Substance.code.coding">
       <path value="Substance.code.coding" />
       <slicing>
@@ -37,7 +41,7 @@
     <element id="Substance.code.coding:FEST-Substance.code">
       <path value="Substance.code.coding.code" />
       <short value="Substance Id in FEST" />
-      <definition value="The FEST Id is unique across versions of FEST. " />
+      <definition value="The FEST Id is unique across versions of FEST." />
       <min value="1" />
     </element>
     <element id="Substance.code.coding:FEST-Substance.display">

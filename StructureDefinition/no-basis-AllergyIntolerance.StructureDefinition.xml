@@ -10,6 +10,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
   <derivation value="constraint" />
   <differential>
+    <element id="AllergyIntolerance">
+      <path value="AllergyIntolerance" />
+      <definition value="Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.&#xD;&#xA;&#xD;&#xA;Norwegian profile: &#xD;&#xA;no-basis-AllergyIntolerance is the basic profile for communicating Allergy intoleeance identifed for a patient. It is adapted to be used in Norway. The profile has the following changes from AllergyIntolerance:&#xD;&#xA;- There are restrictions to use verificationStatus since KI is using Certainty that has similar use&#xD;&#xA;- Reference to patient is changes. no-basis-patient should be used.&#xD;&#xA;- Substance is required and should include one of: ATC, FestSubstance, FestMedication&#xD;&#xA;- manifestation is changed to use codingsystem 7497&#xD;&#xA;- the profile is extended with certanity and sourceOfInformation to support national KI standard&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" />
+    </element>
     <element id="AllergyIntolerance.extension">
       <path value="AllergyIntolerance.extension" />
       <slicing>
@@ -41,6 +45,10 @@
     <element id="AllergyIntolerance.verificationStatus">
       <path value="AllergyIntolerance.verificationStatus" />
       <definition value="Assertion about certainty associated with the propensity, or potential risk, of a reaction to the identified substance (including pharmaceutical product).&#xD;&#xA;&#xD;&#xA;Only the values &quot;confirmed&quot; and &quot;refuted&quot; are used. The availeble values are differnt from Norwegian stadard values. Certainty is used to identify the norwegian values." />
+    </element>
+    <element id="AllergyIntolerance.criticality">
+      <path value="AllergyIntolerance.criticality" />
+      <definition value="Estimate of the potential clinical harm, or seriousness, of the reaction to the identified substance. &#xD;&#xA;" />
     </element>
     <element id="AllergyIntolerance.patient">
       <path value="AllergyIntolerance.patient" />
@@ -98,6 +106,11 @@
     <element id="AllergyIntolerance.reaction.substance.coding:FestMedication.system">
       <path value="AllergyIntolerance.reaction.substance.coding.system" />
       <fixedUri value="http://ehelse.no/FESTMedication" />
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation">
+      <path value="AllergyIntolerance.reaction.manifestation" />
+      <definition value="Clinical symptoms and/or signs that are observed or associated with the adverse reaction event. Coding system 7497 shall be used. " />
+      <max value="1" />
     </element>
     <element id="AllergyIntolerance.reaction.manifestation.coding">
       <path value="AllergyIntolerance.reaction.manifestation.coding" />
