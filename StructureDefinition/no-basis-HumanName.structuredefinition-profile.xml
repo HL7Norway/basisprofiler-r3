@@ -5,11 +5,11 @@
     <versionId value="1" />
     <lastUpdated value="2018-06-13T12:22:47.269+00:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-HumanName" />
-  <version value="0.3" />
+  <url value="http://hl7.no/fhir/StructureDefinition/no-basis-HumanName" />
+  <version value="1.0" />
   <name value="no-basis-HumanName" />
-  <status value="draft" />
-  <date value="2018-06-13T12:22:46.532Z" />
+  <status value="active" />
+  <date value="2018-10-26" />
   <description value="Basisprofil for Norwegian HumanName. Defined by The Norwegian Directorate of eHealth and HL7 Norway. The profile adds the concept of middlename and further explains of the use for the data-elements in a Norwegian context. The basis profile is open, but derived profiles should close down the information elements according to specification relevant to the use-case." />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
@@ -295,6 +295,7 @@
       <short value="The middlename" />
       <definition value="The middle name of the person.&#xD;&#xA;The middlename should be a norwegian middlename as defined by norwegian regulation (Lov om personnavn)." />
       <comment value="A stream of bytes, base64 encoded" />
+      <alias value="mellomnavn" />
       <min value="0" />
       <max value="1" />
       <base>
@@ -459,7 +460,7 @@
     <element id="HumanName.given">
       <path value="HumanName.given" />
       <short value="Given names (not always 'first')" />
-      <definition value="Given name. In Norway Given name does not include middlenames according to the regulation for norwegian names. Multiple given names are however legal. Ref. &quot;Lov om personnavn&quot; for further details about Norwegian HumanNames.&#xD;&#xA;" />
+      <definition value="Given name. In Norway Given name does not include middlenames according to the regulation for norwegian names. Multiple given names are however legal. Ref. &quot;Lov om personnavn&quot; for further details about Norwegian HumanNames." />
       <comment value="If only initials are recorded, they may be used in place of the full name.  Not called &quot;first name&quot; since given names do not always come first." />
       <alias value="first name" />
       <alias value="middle name" />
@@ -662,7 +663,6 @@
       <sliceName value="middlename" />
       <short value="Defines a middle name" />
       <definition value="Defines a middle name as a specific extension as this is widely used in Norwegian names and the given shoul appear before any middle name." />
-      <alias value="mellomnavn" />
       <type>
         <code value="Extension" />
         <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename" />
@@ -682,7 +682,7 @@
     <element id="HumanName.given">
       <path value="HumanName.given" />
       <short value="Given names (not always 'first')" />
-      <definition value="Given name. In Norway Given name does not include middlenames according to the regulation for norwegian names. Multiple given names are however legal. Ref. &quot;Lov om personnavn&quot; for further details about Norwegian HumanNames.&#xD;&#xA;" />
+      <definition value="Given name. In Norway Given name does not include middlenames according to the regulation for norwegian names. Multiple given names are however legal. Ref. &quot;Lov om personnavn&quot; for further details about Norwegian HumanNames." />
       <alias value="fornavn" />
       <min value="1" />
       <max value="1" />

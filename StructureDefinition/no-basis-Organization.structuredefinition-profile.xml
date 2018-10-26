@@ -1,15 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-basis-Organization" />
   <meta>
     <versionId value="2" />
     <lastUpdated value="2018-06-07T10:49:58.004+00:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-Organization" />
-  <version value="0.2" />
+  <url value="http://hl7.no/fhir/StructureDefinition/no-basis-Organization" />
+  <version value="1.0" />
   <name value="no-basis-Organization" />
-  <status value="draft" />
-  <date value="2018-06-07T10:49:57.178Z" />
+  <status value="active" />
+  <date value="2018-10-26" />
   <description value="Basisprofil for Norwegian Organization information. Defined by The Norwegian Directorate of eHealth and HL7 Norway. The basis profile describes information structures typically used for identifying norwegian organizations. Should be used as a basis for further profiling in use-cases where other specific identity information is needed. The basis profile is open, but derived profiles should close down the information elements according to specification relevant to the use-case." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -1618,9 +1618,9 @@
     </element>
     <element id="Organization.address">
       <path value="Organization.address" />
-      <short value="An address expressed using postal conventions (as opposed to GPS or other location definition formats)" />
-      <definition value="An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world." />
-      <comment value="Note: address is for postal addresses, not physical locations." />
+      <short value="An address for the organization" />
+      <definition value="An address for the organization." />
+      <comment value="Organization may have multiple addresses with different uses or applicable periods. The use code home is not to be used." />
       <requirements value="May need to keep track of the organization's addresses for contacting, billing or reporting requirements." />
       <min value="0" />
       <max value="*" />
@@ -2052,12 +2052,12 @@
     </element>
     <element id="Organization.contact.address">
       <path value="Organization.contact.address" />
-      <short value="An address expressed using postal conventions (as opposed to GPS or other location definition formats)" />
-      <definition value="An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world." />
+      <short value="Visiting or postal addresses for the contact" />
+      <definition value="Visiting or postal addresses for the contact." />
       <comment value="Note: address is for postal addresses, not physical locations." />
       <requirements value="May need to keep track of a contact party's address for contacting, billing or reporting requirements." />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="Organization.contact.address" />
         <min value="0" />

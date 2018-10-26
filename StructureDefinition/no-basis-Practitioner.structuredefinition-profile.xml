@@ -5,11 +5,11 @@
     <versionId value="1" />
     <lastUpdated value="2018-06-06T06:11:16.19+00:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-Practitioner" />
-  <version value="0.2" />
+  <url value="http://hl7.no/fhir/StructureDefinition/no-basis-Practitioner" />
+  <version value="1.0" />
   <name value="no-basis-Practitioner" />
-  <status value="draft" />
-  <date value="2018-06-06T06:11:15.177Z" />
+  <status value="active" />
+  <date value="2018-10-26" />
   <description value="Basisprofil for Norwegian Practitioner information. Defined by The Norwegian Directorate of eHealth an HL7 Norway. Should be used as a basis for further profiling in use-cases where specific identity information is needed. The basis profile is open, but derived profiles should close down the information elements according to specification relevant to the use-case." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
@@ -2387,7 +2387,7 @@
       <path value="Practitioner.address" />
       <short value="Norwegian address" />
       <definition value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address&#xD;&#xA;&#xD;&#xA;Address(es) of the practitioner that are not role specific (typically home address). &#xD;Work addresses are not typically entered in this property as they are usually role dependent." />
-      <comment value="Note: address is for postal addresses, not physical locations." />
+      <comment value="The PractitionerRole does not have an address value on it, as it is expected that the location property be used for this purpose (which has an address)." />
       <requirements value="The home/mailing address of the practitioner is often required for employee administration purposes, and also for some rostering services where the start point (practitioners home) can be used in calculations." />
       <min value="0" />
       <max value="*" />

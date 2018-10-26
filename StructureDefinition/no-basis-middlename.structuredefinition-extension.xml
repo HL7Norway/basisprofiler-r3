@@ -1,15 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-basis-middlename" />
   <meta>
     <versionId value="1" />
     <lastUpdated value="2018-06-13T12:23:00.348+00:00" />
   </meta>
-  <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename" />
-  <version value="0.1" />
+  <url value="http://hl7.no/fhir/StructureDefinition/no-basis-middlename" />
+  <version value="1.0" />
   <name value="no-basis-middlename" />
-  <status value="draft" />
-  <date value="2018-06-13T12:22:59.875Z" />
+  <status value="active" />
+  <date value="2018-10-26" />
   <publisher value="Direktoratet for e-helse" />
   <description value="The basis extension defines the Norwegian middlename wich is called &quot;mellomnavn&quot; and defined by Norwegian legislation (Lov om personnavn)." />
   <purpose value="Specific usage of middle name as a specific part of official name standard where name order is important" />
@@ -152,7 +152,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename" />
+      <fixedUri value="http://hl7.no/fhir/StructureDefinition/no-basis-middlename" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -215,7 +215,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename" />
+      <fixedUri value="http://hl7.no/fhir/StructureDefinition/no-basis-middlename" />
     </element>
     <element id="Extension.value[x]:valueString">
       <path value="Extension.valueString" />

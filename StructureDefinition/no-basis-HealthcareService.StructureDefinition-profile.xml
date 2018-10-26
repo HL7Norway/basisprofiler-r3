@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-basis-HealthcareService" />
-  <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-HealthcareService" />
+  <url value="http://hl7.no/fhir/StructureDefinition/no-basis-HealthcareService" />
   <version value="0.1" />
   <name value="no-basis-HealthcareService" />
   <status value="draft" />
@@ -670,7 +670,7 @@
     <element id="HealthcareService.identifier:HER.system">
       <path value="HealthcareService.identifier.system" />
       <short value="The official name of the HERid namespace" />
-      <definition value="The official name of the HERid namespace, identified by its oid value&#xD;&#xA;" />
+      <definition value="The official name of the HERid namespace, identified by its oid value" />
       <comment value="see http://en.wikipedia.org/wiki/Uniform_resource_identifier" />
       <requirements value="There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." />
       <min value="0" />
@@ -2814,7 +2814,7 @@
     <element id="HealthcareService.identifier:HER.system">
       <path value="HealthcareService.identifier.system" />
       <short value="The official name of the HERid namespace" />
-      <definition value="The official name of the HERid namespace, identified by its oid value&#xD;&#xA;" />
+      <definition value="The official name of the HERid namespace, identified by its oid value" />
       <fixedUri value="urn:oid:2.16.578.1.12.4.1.2" />
     </element>
     <element id="HealthcareService.identifier:HER.value">
