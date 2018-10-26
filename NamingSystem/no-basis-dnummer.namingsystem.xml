@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <NamingSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../STU3/fhir-all-xsd/fhir-single.xsd">
     <meta>
-        <versionId value="0.2" />
+        <versionId value="1.0" />
     </meta>
     <name value="D-nummer" />
-    <status value="draft" />
+    <status value="active" />
     <kind value="identifier" />
-    <date value="2018-08-13"/>
+    <date value="2018-10-26"/>
     <publisher value="Direktoratet for e-helse" />
     <responsible value="Skatteetaten"/>
     <description value="Personidentifikator for personer som ikke har fødselsnummer og som ikke skal registreres som bosatt i Norge. The D-nummer of the patient. (assigned by the norwegian Skatteetaten)" />
     <uniqueId>
         <type value="uri" />
-        <value value="http://ehelse.no/fhir/NamingSystem/DNR" />
+        <value value="http://hl7.no/fhir/NamingSystem/DNR" />
         <preferred value="false" />
     </uniqueId>
     <uniqueId>
