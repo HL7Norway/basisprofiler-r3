@@ -151,7 +151,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-middlename" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -271,7 +271,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename" />
+      <fixedUri value="http://hl7.no/fhir/StructureDefinition/no-basis-middlename" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -665,7 +665,7 @@
       <definition value="Defines a middle name as a specific extension as this is widely used in Norwegian names and the given shoul appear before any middle name." />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-middlename" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-middlename" />
       </type>
     </element>
     <element id="HumanName.extension:middlename.valueString:valueString">

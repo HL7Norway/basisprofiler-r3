@@ -1848,7 +1848,7 @@
       </base>
       <type>
         <code value="HumanName" />
-        <profile value="ttp://ehelse.no/fhir/StructureDefinition/no-basis-HumanName" />
+        <profile value="ttp://hl7.no/fhir/StructureDefinition/no-basis-HumanName" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2386,7 +2386,7 @@
     <element id="Practitioner.address">
       <path value="Practitioner.address" />
       <short value="Norwegian address" />
-      <definition value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address&#xD;&#xA;&#xD;&#xA;Address(es) of the practitioner that are not role specific (typically home address). &#xD;Work addresses are not typically entered in this property as they are usually role dependent." />
+      <definition value="http://hl7.no/fhir/StructureDefinition/no-basis-Address&#xD;&#xA;&#xD;&#xA;Address(es) of the practitioner that are not role specific (typically home address). &#xD;Work addresses are not typically entered in this property as they are usually role dependent." />
       <comment value="The PractitionerRole does not have an address value on it, as it is expected that the location property be used for this purpose (which has an address)." />
       <requirements value="The home/mailing address of the practitioner is often required for employee administration purposes, and also for some rostering services where the start point (practitioners home) can be used in calculations." />
       <min value="0" />
@@ -2398,7 +2398,7 @@
       </base>
       <type>
         <code value="Address" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -4150,7 +4150,7 @@
       <path value="Practitioner.name" />
       <type>
         <code value="HumanName" />
-        <profile value="ttp://ehelse.no/fhir/StructureDefinition/no-basis-HumanName" />
+        <profile value="ttp://hl7.no/fhir/StructureDefinition/no-basis-HumanName" />
       </type>
     </element>
     <element id="Practitioner.name.extension">
@@ -4172,10 +4172,10 @@
     <element id="Practitioner.address">
       <path value="Practitioner.address" />
       <short value="Norwegian address" />
-      <definition value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address&#xD;&#xA;&#xD;&#xA;Address(es) of the practitioner that are not role specific (typically home address). &#xD;Work addresses are not typically entered in this property as they are usually role dependent." />
+      <definition value="http://hl7.no/fhir/StructureDefinition/no-basis-Address&#xD;&#xA;&#xD;&#xA;Address(es) of the practitioner that are not role specific (typically home address). &#xD;Work addresses are not typically entered in this property as they are usually role dependent." />
       <type>
         <code value="Address" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
       </type>
     </element>
     <element id="Practitioner.qualification">

@@ -347,7 +347,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-urban-district" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-urban-district" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -467,7 +467,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/no-basis-urban-district" />
+      <fixedUri value="http://hl7.no/fhir/StructureDefinition/no-basis-urban-district" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -3763,7 +3763,7 @@
       </base>
       <type>
         <code value="HumanName" />
-        <profile value="ttp://ehelse.no/fhir/StructureDefinition/no-basis-HumanName" />
+        <profile value="ttp://hl7.no/fhir/StructureDefinition/no-basis-HumanName" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -4448,7 +4448,7 @@
     <element id="Patient.address">
       <path value="Patient.address" />
       <short value="Norwegian address" />
-      <definition value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+      <definition value="http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
       <comment value="Patient may have multiple addresses with different uses or applicable periods." />
       <requirements value="May need to keep track of patient addresses for contacting, billing or reporting requirements and also to help with identification." />
       <min value="0" />
@@ -4460,7 +4460,7 @@
       </base>
       <type>
         <code value="Address" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -4913,7 +4913,7 @@
       </base>
       <type>
         <code value="HumanName" />
-        <profile value="ttp://ehelse.no/fhir/StructureDefinition/no-basis-HumanName" />
+        <profile value="ttp://hl7.no/fhir/StructureDefinition/no-basis-HumanName" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -5461,7 +5461,7 @@
       </base>
       <type>
         <code value="Address" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -6681,7 +6681,7 @@
       <definition value="The name and number of the of the urban district where the patient has registered home address." />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-urban-district" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-urban-district" />
       </type>
     </element>
     <element id="Patient.extension:urbanDistrict.valueCoding:valueCoding.system">
@@ -6840,7 +6840,7 @@
       <path value="Patient.name" />
       <type>
         <code value="HumanName" />
-        <profile value="ttp://ehelse.no/fhir/StructureDefinition/no-basis-HumanName" />
+        <profile value="ttp://hl7.no/fhir/StructureDefinition/no-basis-HumanName" />
       </type>
     </element>
     <element id="Patient.name.extension">
@@ -6862,17 +6862,17 @@
     <element id="Patient.address">
       <path value="Patient.address" />
       <short value="Norwegian address" />
-      <definition value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+      <definition value="http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
       <type>
         <code value="Address" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
       </type>
     </element>
     <element id="Patient.contact.name">
       <path value="Patient.contact.name" />
       <type>
         <code value="HumanName" />
-        <profile value="ttp://ehelse.no/fhir/StructureDefinition/no-basis-HumanName" />
+        <profile value="ttp://hl7.no/fhir/StructureDefinition/no-basis-HumanName" />
       </type>
     </element>
     <element id="Patient.contact.name.extension">
@@ -6895,7 +6895,7 @@
       <path value="Patient.contact.address" />
       <type>
         <code value="Address" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
       </type>
     </element>
   </differential>

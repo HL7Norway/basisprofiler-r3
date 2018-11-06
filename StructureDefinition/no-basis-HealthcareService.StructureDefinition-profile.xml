@@ -925,7 +925,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Organization" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Organization" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1519,7 +1519,7 @@
         <strength value="extensible" />
         <description value="Tjenestetype CodeSystems" />
         <valueSetReference>
-          <reference value="http://ehelse.no/fhir/ValueSet/no-basis-service-type" />
+          <reference value="http://hl7.no/fhir/ValueSet/no-basis-service-type" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -2835,7 +2835,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Organization" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Organization" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -2886,7 +2886,7 @@
         <strength value="extensible" />
         <description value="Tjenestetype CodeSystems" />
         <valueSetReference>
-          <reference value="http://ehelse.no/fhir/ValueSet/no-basis-service-type" />
+          <reference value="http://hl7.no/fhir/ValueSet/no-basis-service-type" />
         </valueSetReference>
       </binding>
     </element>

@@ -1631,7 +1631,7 @@
       </base>
       <type>
         <code value="Address" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
       </type>
       <condition value="ele-1" />
       <condition value="org-2" />
@@ -1697,7 +1697,7 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Organization" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Organization" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2065,7 +2065,7 @@
       </base>
       <type>
         <code value="Address" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2187,7 +2187,7 @@
       <path value="Organization.address" />
       <type>
         <code value="Address" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
       </type>
     </element>
     <element id="Organization.partOf">
@@ -2198,14 +2198,14 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Organization" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Organization" />
       </type>
     </element>
     <element id="Organization.contact.address">
       <path value="Organization.contact.address" />
       <type>
         <code value="Address" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
       </type>
     </element>
   </differential>

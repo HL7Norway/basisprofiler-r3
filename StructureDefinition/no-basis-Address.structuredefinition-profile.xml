@@ -152,7 +152,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -195,7 +195,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-address-official" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-address-official" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -752,7 +752,7 @@
       <comment value="real property identification" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation" />
       </type>
     </element>
     <element id="Address.extension:official">
@@ -760,7 +760,7 @@
       <sliceName value="official" />
       <type>
         <code value="Extension" />
-        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-address-official" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-address-official" />
       </type>
     </element>
     <element id="Address.use">
