@@ -11,7 +11,7 @@
 	<address>
 	<!-- Postal address for the organization -->
 	<!-- Norwegian basisprofil for Address resource adding Norwegian specific property information, official use of address and further explanation of the use for the data-elements in a Norwegian address. -->
-		<extension url="http://ehelse.no/fhir/StructureDefinition/no-basis-address-official">
+		<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-address-official">
 		<!-- Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in "Folkeregisteret" for persons or "Enhetsregisteret" for organizations. -->
 			<valueBoolean value="true"/>
 		</extension>
@@ -23,7 +23,7 @@
 	<address>
 	<!-- Organizational address for the organization -->
 	<!-- Norwegian basisprofil for Address resource adding Norwegian specific property information, official use of address and further explanation of the use for the data-elements in a Norwegian address. -->
-		<extension url="http://ehelse.no/fhir/StructureDefinition/no-basis-address-official">
+		<extension url="http://hl7.no/fhir/StructureDefinition/no-basis-address-official">
 		<!-- Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in "Folkeregisteret" for persons or "Enhetsregisteret" for organizations. -->
 			<valueBoolean value="true"/>
 		</extension>
