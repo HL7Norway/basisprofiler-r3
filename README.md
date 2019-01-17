@@ -23,7 +23,7 @@ Basisprofilene blir automatisk publisert [her på Simplifer.net](https://simplif
 
 Tilbakemeldinger kan skje, enten på epost (se kontaktpersoner under), eller ved å bli medlem av [prosjektet på GitHub](https://github.com/HL7Norway/basisprofiler-r3) og legge det inn som issues, eventuelt lage en egen branch med forslag til endringer. Det er mulig å legge inn issues uten å være medlem av git'en. 
 
-##Neste workshop 5. februar 2019
+## Neste workshop 5. februar 2019
 
 * Person
 * PractionerRole
