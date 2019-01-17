@@ -23,9 +23,20 @@ Basisprofilene blir automatisk publisert [her på Simplifer.net](https://simplif
 
 Tilbakemeldinger kan skje, enten på epost (se kontaktpersoner under), eller ved å bli medlem av [prosjektet på GitHub](https://github.com/HL7Norway/basisprofiler-r3) og legge det inn som issues, eventuelt lage en egen branch med forslag til endringer. Det er mulig å legge inn issues uten å være medlem av git'en. 
 
-## Neste workshop: Medication++
+##Neste workshop 5. februar 2019
 
-Workshop på Gardermoen 23. oktober 2018 konsentrerer seg om
+* Person
+* PractionerRole
+* HealthCareService
+* Location
+* Endpoint
+* RelatedPerson
+
+Førsteutkast legger vi ut her i [branch emergingprofiles](https://github.com/HL7Norway/basisprofiler-r3/tree/emergingprofiles)
+
+## Forrige workshop: Medication++
+
+Workshop på Gardermoen 23. oktober 2018 konsentrerte seg om
 * Medication
 * MedicationStatement
 * Substance
