@@ -13,4 +13,55 @@
   <type value="Endpoint" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Endpoint" />
   <derivation value="constraint" />
+  <differential>
+    <element id="Endpoint">
+      <path value="Endpoint" />
+      <definition value="The no-basis profile of the Endpoint resource makes it possible to use the resource for the norwegian service based adressing (tjenestebasert adressering) and other adressing schemes.&#xD;&#xA;&#xD;&#xA;The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b or a REST endpoint for another FHIR server. This may include any security context information." />
+    </element>
+    <element id="Endpoint.identifier">
+      <path value="Endpoint.identifier" />
+      <comment value="no-basis: Adresseregisteret do not provide a identifier for the Endpoints, so any identifier scheme is apropriate. " />
+    </element>
+    <element id="Endpoint.connectionType">
+      <path value="Endpoint.connectionType" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="no-basis:  the connection type should be coded according to http://hl7.org/fhir/ValueSet/endpoint-connection-type. However specific connection types used in Norway can be coded according to http://hl7.no/fhir/ValueSet/no-basis-endpoint-connection-type (amqp, ebxml etc.)&#xD;&#xA;&#xD;&#xA;A coded value that represents the technical details of the usage of this endpoint, such as what WSDLs should be used in what way. (e.g. XDS.b/DICOM/cds-hook).&#xD;&#xA;" />
+    </element>
+    <element id="Endpoint.connectionType:ConnectionType">
+      <path value="Endpoint.connectionType" />
+      <sliceName value="ConnectionType" />
+    </element>
+    <element id="Endpoint.connectionType:additionalConnectionType">
+      <path value="Endpoint.connectionType" />
+      <sliceName value="additionalConnectionType" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="endpoint-contype" />
+        </extension>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="http://hl7.no/fhir/ValueSet/no-basis-endpoint-connection-type" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Endpoint.managingOrganization">
+      <path value="Endpoint.managingOrganization" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Organization" />
+      </type>
+      <definition value="The organization that manages this endpoint (even if technically another organisation is hosting this in the cloud, it is the organisation associated with the data).&#xD;&#xA;&#xD;&#xA;no-basis: In Norway this relates to the organization with the responsibility of the data &quot;databehandleransvar&quot;" />
+      <alias value="databehandleransvar" />
+    </element>
+  </differential>
 </StructureDefinition>
