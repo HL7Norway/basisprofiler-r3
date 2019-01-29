@@ -42,7 +42,7 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="service-category" />
         </extension>
-        <strength value="extensible" />
+        <strength value="preferred" />
         <description value="virksomhetstype 9040" />
         <valueSetUri value="urn:oid:2.16.578.1.12.4.1.1.9040" />
       </binding>
@@ -68,16 +68,21 @@
     </element>
     <element id="HealthcareService.type">
       <path value="HealthcareService.type" />
-      <short value="Service type" />
-      <definition value="The specific type defined in a codesystem allowed included in the valueset." />
-      <mustSupport value="true" />
+      <short value="Helsehjelpsområde" />
+      <definition value="no-basis: Helsehjelpsområde (OID=8655) used to code the kind of clinical service the organization offers the patients through this HealthcareService&#xD;&#xA;Also use Klinisk/medisinsk service (OID=8654)?&#xD;&#xA;&#xD;&#xA;The specific type defined in a codesystem allowed included in the valueset." />
+      <alias value="helsehjelpsområde" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="service-type" />
         </extension>
-        <strength value="extensible" />
-        <description value="Tjenestetype CodeSystems" />
+        <strength value="preferred" />
+        <description value="Helsehjelpsområde" />
+        <valueSetUri value="urn:oid:2.16.578.1.12.4.1.1.8655" />
       </binding>
+    </element>
+    <element id="HealthcareService.specialty">
+      <path value="HealthcareService.specialty" />
+      <definition value="no-basis: Helsehjelpsområde (HealthcareService.type) is a combination of type and speciality, the speciality is usually not necessarry in addtion.&#xD;&#xA;&#xD;&#xA;Collection of specialties handled by the service site. This is more of a medical term." />
     </element>
     <element id="HealthcareService.endpoint">
       <path value="HealthcareService.endpoint" />
