@@ -32,14 +32,12 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Organization" />
       </type>
-      <mustSupport value="true" />
     </element>
     <element id="HealthcareService.category">
       <path value="HealthcareService.category" />
       <short value="Helsevirksomhet type (OID=9040)" />
       <definition value="Helsevirksomhet type (OID=9040), identifies the virksomhetstype used in Adresseregisteret." />
       <alias value="virksomhetstype" />
-      <mustSupport value="true" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="service-category" />
@@ -83,7 +81,7 @@
     </element>
     <element id="HealthcareService.endpoint">
       <path value="HealthcareService.endpoint" />
-      <definition value="In Norway endpoints for communication should be connected to a TBA-Organization identified with HERid and collected from the Norwegian Address register.&#xD;&#xA;&#xD;&#xA;Technical endpoints providing access to services operated for the specific healthcare services defined at this resource." />
+      <definition value="no-basis: In Norway endpoints for communication should be connected to a kommunikasjonspart-Organization identified with HERid and collected from the Norwegian Address register. Endpoints not registered in the Norwegian Address register can use other schemes of connecting endpoints to Organizations, PractitionerRole or HealthcareService.&#xD;&#xA;&#xD;&#xA;Technical endpoints providing access to services operated for the specific healthcare services defined at this resource." />
       <mustSupport value="false" />
     </element>
   </differential>
