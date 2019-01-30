@@ -93,6 +93,18 @@
     <element id="Endpoint.address">
       <path value="Endpoint.address" />
       <definition value="The uri that describes the actual end-point to connect to.&#xD;&#xA;&#xD;&#xA;no-basis: for ebXML messages in Norway one is expected to use mailto: suffix for the endpoint. For AMQP messages in Norway one is expected to use &quot;ampq:&quot; or &quot;amqps:&quot; suffix" />
+      <example>
+        <label value="amqp endpoint" />
+        <valueUri value="amqp://sb.test.nhn.no/NHNTESTServiceBus/8129886_sync" />
+      </example>
+      <example>
+        <label value="ebxml endpoint" />
+        <valueUri value="mailto:mottak-qass@test-es.nav.no" />
+      </example>
+      <example>
+        <label value="REST endpoint" />
+        <valueUri value="https://vkp-dev.portal.azure-api.net" />
+      </example>
     </element>
   </differential>
 </StructureDefinition>

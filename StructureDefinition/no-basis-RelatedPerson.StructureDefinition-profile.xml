@@ -73,6 +73,82 @@
         <valueString value="700199 50032" />
       </example>
     </element>
+    <element id="RelatedPerson.patient">
+      <path value="RelatedPerson.patient" />
+      <short value="The person this person is related to" />
+      <definition value="no-basis: Can reference no-basis-Patient, no-basis-Person or Person in addition to Patient resources.&#xD;&#xA;&#xD;&#xA;The patient this person is related to." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Person" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Person" />
+      </type>
+    </element>
+    <element id="RelatedPerson.relationship">
+      <path value="RelatedPerson.relationship" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="RelatedPerson.relationship:sivilstand">
+      <path value="RelatedPerson.relationship" />
+      <sliceName value="sivilstand" />
+      <short value="relationship status from Norwegian Person Index" />
+      <definition value="Sivilstand as registered in the norwegian Person Index (folkeregisteret&#xD;&#xA;• uoppgitt (kode i DSF: 0)&#xD;&#xA;• ugift (kode i DSF: 1)&#xD;&#xA;• gift (kode i DSF: 2)&#xD;&#xA;• enkeEllerEnkemann (enke eller enkemann) (kode i DSF: 3)&#xD;&#xA;• skilt (kode i DSF: 4)&#xD;&#xA;• separert (kode i DSF: 5)&#xD;&#xA;• registrertPartner(registrert partner) (kode i DSF: 6)&#xD;&#xA;• separertPartner (separert partner) (kode i DSF: 7)&#xD;&#xA;• skiltPartner (skilt partner) (kode i DSF: 8)&#xD;&#xA;• gjenlevendePartner (gjenlevende partner) (kode i DSF: 9)&#xD;&#xA;" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PatientRelationshipType" />
+        </extension>
+        <strength value="preferred" />
+        <valueSetReference>
+          <reference value="http://hl7.no/fhir/ValueSet/relatedperson-sivilstand" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="RelatedPerson.relationship:familierelasjon">
+      <path value="RelatedPerson.relationship" />
+      <sliceName value="familierelasjon" />
+      <short value="Family relationship from Norwegian Person Index" />
+      <definition value="Family relationship from Norwegian Person Index&#xD;&#xA;&#xD;&#xA;mor&#xD;&#xA;far&#xD;&#xA;medmor&#xD;&#xA;barn&#xD;&#xA;søsken&#xD;&#xA;ektefelleEllerPartner&#xD;&#xA;dødfødtBarn&#xD;&#xA;" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PatientRelationshipType" />
+        </extension>
+        <strength value="preferred" />
+        <valueSetReference>
+          <reference value="http://hl7.no/fhir/ValueSet/relatedperson-familierelasjon" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="RelatedPerson.relationship:foreldreansvar">
+      <path value="RelatedPerson.relationship" />
+      <sliceName value="foreldreansvar" />
+      <short value="parent child relationship from Norwegian Person Index" />
+      <definition value="parent child relationship from Norwegian Person Index&#xD;&#xA;(FREG modernisert folgeregister)&#xD;&#xA;- felles&#xD;&#xA;- mor&#xD;&#xA;- far&#xD;&#xA;- medmor&#xD;&#xA;- andre&#xD;&#xA;- ukjent" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PatientRelationshipType" />
+        </extension>
+        <strength value="preferred" />
+        <valueSetReference>
+          <reference value="http://hl7.no/fhir/ValueSet/relatedperson-foreldreansvar" />
+        </valueSetReference>
+      </binding>
+    </element>
     <element id="RelatedPerson.name">
       <path value="RelatedPerson.name" />
       <type>
