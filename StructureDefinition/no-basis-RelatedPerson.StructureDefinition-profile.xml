@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="no-basis-RelatedPerson" />
+  <url value="http://hl7.no/fhir/StructureDefinition/no-basis-RelatedPerson" />
+  <version value="0.1" />
+  <name value="no-basis-RelatedPerson" />
+  <status value="draft" />
+  <date value="2019-01-29" />
+  <description value="Basisprofil for Norwegian RelatedPerson information. Defined by The Norwegian Directorate of eHealth and HL7 Norway. Should be used as a basis for further profiling in use-cases where specific identity information is needed. The basis profile is open, but derived profiles should close down the information elements according to specification relevant to the use-case." />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="RelatedPerson" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="RelatedPerson.identifier">
+      <path value="RelatedPerson.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type.coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="An identifier for this person. Should be at Fødselsnummer or D-nummer&#xD;&#xA;&#xD;&#xA;Identifier for a person within a particular scope." />
+    </element>
+    <element id="RelatedPerson.identifier:FNR">
+      <path value="RelatedPerson.identifier" />
+      <sliceName value="FNR" />
+      <short value="Norwegian FNR" />
+      <definition value="Fødselsnummer for the patient. Fødselsnummer as one of the possible patient identifier, should at least be sent unless there is a reason not to. Reasons for not sending the Fødselsnummer include but are not limited to, research and apps without a contract for processing data.&#xD;&#xA;&#xD;&#xA;Multiple FNR can exist for a person. If several FNR is provided the time period that each identifier is valid should be provided. No information about period is required when only one FNR is provided." />
+    </element>
+    <element id="RelatedPerson.identifier:FNR.system">
+      <path value="RelatedPerson.identifier.system" />
+      <short value="Identification of the Norwegian FNR" />
+      <definition value="Identifies that this is a Norwegian Fødselsnummer" />
+      <min value="1" />
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.4.1" />
+    </element>
+    <element id="RelatedPerson.identifier:FNR.value">
+      <path value="RelatedPerson.identifier.value" />
+      <short value="The actual Fødselsnummer" />
+      <definition value="The Norwegian Fødselsnummer" />
+      <alias value="Fødselsnummer" />
+      <min value="1" />
+      <example>
+        <label value="Fødselsnummer" />
+        <valueString value="15076500565" />
+      </example>
+    </element>
+    <element id="RelatedPerson.identifier:DNR">
+      <path value="RelatedPerson.identifier" />
+      <sliceName value="DNR" />
+      <short value="The D-nummer of the patient" />
+      <definition value="The D-nummer of the patient. (assigned by the norwegian Skatteetaten)" />
+    </element>
+    <element id="RelatedPerson.identifier:DNR.system">
+      <path value="RelatedPerson.identifier.system" />
+      <short value="The identification of the D-nummer" />
+      <definition value="The identification of the Norwegian D-nummer" />
+      <min value="1" />
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.4.2" />
+    </element>
+    <element id="RelatedPerson.identifier:DNR.value">
+      <path value="RelatedPerson.identifier.value" />
+      <short value="The actual D-nummer" />
+      <definition value="The actual Norwegian D-nummer" />
+      <alias value="D-nummer" />
+      <min value="1" />
+      <example>
+        <label value="D-nummer" />
+        <valueString value="700199 50032" />
+      </example>
+    </element>
+    <element id="RelatedPerson.patient">
+      <path value="RelatedPerson.patient" />
+      <short value="The person this person is related to" />
+      <definition value="no-basis: Can reference no-basis-Patient, no-basis-Person or Person in addition to Patient resources.&#xD;&#xA;&#xD;&#xA;The patient this person is related to." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Person" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Person" />
+      </type>
+    </element>
+    <element id="RelatedPerson.relationship">
+      <path value="RelatedPerson.relationship" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="RelatedPerson.relationship:sivilstand">
+      <path value="RelatedPerson.relationship" />
+      <sliceName value="sivilstand" />
+      <short value="relationship status from Norwegian Person Index" />
+      <definition value="Sivilstand as registered in the norwegian Person Index (folkeregisteret&#xD;&#xA;• uoppgitt (kode i DSF: 0)&#xD;&#xA;• ugift (kode i DSF: 1)&#xD;&#xA;• gift (kode i DSF: 2)&#xD;&#xA;• enkeEllerEnkemann (enke eller enkemann) (kode i DSF: 3)&#xD;&#xA;• skilt (kode i DSF: 4)&#xD;&#xA;• separert (kode i DSF: 5)&#xD;&#xA;• registrertPartner(registrert partner) (kode i DSF: 6)&#xD;&#xA;• separertPartner (separert partner) (kode i DSF: 7)&#xD;&#xA;• skiltPartner (skilt partner) (kode i DSF: 8)&#xD;&#xA;• gjenlevendePartner (gjenlevende partner) (kode i DSF: 9)&#xD;&#xA;" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PatientRelationshipType" />
+        </extension>
+        <strength value="preferred" />
+        <valueSetReference>
+          <reference value="http://hl7.no/fhir/ValueSet/relatedperson-sivilstand" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="RelatedPerson.relationship:familierelasjon">
+      <path value="RelatedPerson.relationship" />
+      <sliceName value="familierelasjon" />
+      <short value="Family relationship from Norwegian Person Index" />
+      <definition value="Family relationship from Norwegian Person Index&#xD;&#xA;&#xD;&#xA;mor&#xD;&#xA;far&#xD;&#xA;medmor&#xD;&#xA;barn&#xD;&#xA;søsken&#xD;&#xA;ektefelleEllerPartner&#xD;&#xA;dødfødtBarn&#xD;&#xA;" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PatientRelationshipType" />
+        </extension>
+        <strength value="preferred" />
+        <valueSetReference>
+          <reference value="http://hl7.no/fhir/ValueSet/relatedperson-familierelasjon" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="RelatedPerson.relationship:foreldreansvar">
+      <path value="RelatedPerson.relationship" />
+      <sliceName value="foreldreansvar" />
+      <short value="parent child relationship from Norwegian Person Index" />
+      <definition value="parent child relationship from Norwegian Person Index&#xD;&#xA;(FREG modernisert folgeregister)&#xD;&#xA;- felles&#xD;&#xA;- mor&#xD;&#xA;- far&#xD;&#xA;- medmor&#xD;&#xA;- andre&#xD;&#xA;- ukjent" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PatientRelationshipType" />
+        </extension>
+        <strength value="preferred" />
+        <valueSetReference>
+          <reference value="http://hl7.no/fhir/ValueSet/relatedperson-foreldreansvar" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="RelatedPerson.name">
+      <path value="RelatedPerson.name" />
+      <type>
+        <code value="HumanName" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-HumanName" />
+      </type>
+    </element>
+    <element id="RelatedPerson.address">
+      <path value="RelatedPerson.address" />
+      <short value="Norwegian address" />
+      <definition value="http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
+      <type>
+        <code value="Address" />
+        <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

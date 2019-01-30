@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="no-basis-Endpoint" />
+  <url value="http://hl7.no/fhir/StructureDefinition/no-basis-Endpoint" />
+  <version value="0.1" />
+  <name value="no-basis-Endpoint" />
+  <status value="draft" />
+  <date value="2019-01-25" />
+  <description value="Basisprofil for Norwegian Endpoint information. Defined by The Norwegian Directorate of eHealth and HL7 Norway. The profile adds Norwegian specific identification of Endpoing. The basis profile is open, but derived profiles should close down the information elements according to specification relevant to the use-case." />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Endpoint" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Endpoint" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Endpoint">
+      <path value="Endpoint" />
+      <definition value="The no-basis profile of the Endpoint resource makes it possible to use the resource for the norwegian service based adressing (tjenestebasert adressering) and other adressing schemes.&#xD;&#xA;&#xD;&#xA;The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b or a REST endpoint for another FHIR server. This may include any security context information." />
+    </element>
+    <element id="Endpoint.identifier">
+      <path value="Endpoint.identifier" />
+      <comment value="no-basis: Adresseregisteret do not provide a identifier for the Endpoints, so any identifier scheme is apropriate." />
+    </element>
+    <element id="Endpoint.connectionType">
+      <path value="Endpoint.connectionType" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="no-basis:  the connection type should be coded according to http://hl7.org/fhir/ValueSet/endpoint-connection-type. However specific connection types used in Norway can be coded according to http://hl7.no/fhir/ValueSet/no-basis-endpoint-connection-type (amqp, ebxml etc.)&#xD;&#xA;&#xD;&#xA;A coded value that represents the technical details of the usage of this endpoint, such as what WSDLs should be used in what way. (e.g. XDS.b/DICOM/cds-hook)." />
+    </element>
+    <element id="Endpoint.connectionType:ConnectionType">
+      <path value="Endpoint.connectionType" />
+      <sliceName value="ConnectionType" />
+    </element>
+    <element id="Endpoint.connectionType:additionalConnectionType">
+      <path value="Endpoint.connectionType" />
+      <sliceName value="additionalConnectionType" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="endpoint-contype" />
+        </extension>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="http://hl7.no/fhir/ValueSet/no-basis-endpoint-connection-type" />
+        </valueSetReference>
+      </binding>
+    </element>
+    <element id="Endpoint.managingOrganization">
+      <path value="Endpoint.managingOrganization" />
+      <definition value="The organization that manages this endpoint (even if technically another organisation is hosting this in the cloud, it is the organisation associated with the data).&#xD;&#xA;&#xD;&#xA;no-basis: In Norway this relates to the organization with the responsibility for the data &quot;databehandler&quot;" />
+      <alias value="databehandler" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Organization" />
+      </type>
+    </element>
+    <element id="Endpoint.payloadType">
+      <path value="Endpoint.payloadType" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="no-basis: : for ebXML and AMQP messages in Norway one is expected to list all mesage types that the endpoint supports using the CodeSystem Meldingens funksjon (OID=8279). Other payload types can be given using codes from the ValueSet http://hl7.org/fhir/ValueSet/endpoint-payload-type. REST endpoints are expected to use the code &quot;any&quot; from https://www.hl7.org/fhir/codesystem-endpoint-payload-type.html.&#xD;&#xA;&#xD;&#xA;The payload type describes the acceptable content that can be communicated on the endpoint." />
+    </element>
+    <element id="Endpoint.payloadType:meldingensFunksjon">
+      <path value="Endpoint.payloadType" />
+      <sliceName value="meldingensFunksjon" />
+      <definition value="no-basis: for ebXML and AMQP messages in Norway one is expected to list all mesage types that the endpoint supports using the CodeSystem Meldingens funksjon (OID=8279). Version information (version of the payload document) shold be given in the coding.version element.&#xD;&#xA;&#xD;&#xA;The payload type describes the acceptable content that can be communicated on the endpoint." />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="PayloadType" />
+        </extension>
+        <strength value="required" />
+        <valueSetUri value="urn:oid:2.16.578.1.12.4.1.1.8279" />
+      </binding>
+    </element>
+    <element id="Endpoint.payloadMimeType">
+      <path value="Endpoint.payloadMimeType" />
+      <definition value="no-basis: should we list relevant codes for ebXML messages? List appropriate media types for FHIR REST endpoints?&#xD;&#xA;XML: application/fhir+xml&#xD;&#xA;JSON: application/fhir+json&#xD;&#xA;RDF: application/fhir+turtle&#xD;&#xA;&#xD;&#xA;The mime type to send the payload in - e.g. application/fhir+xml, application/fhir+json. If the mime type is not specified, then the sender could send any content (including no content depending on the connectionType)." />
+    </element>
+    <element id="Endpoint.address">
+      <path value="Endpoint.address" />
+      <definition value="The uri that describes the actual end-point to connect to.&#xD;&#xA;&#xD;&#xA;no-basis: for ebXML messages in Norway one is expected to use mailto: suffix for the endpoint. For AMQP messages in Norway one is expected to use &quot;ampq:&quot; or &quot;amqps:&quot; suffix" />
+      <example>
+        <label value="amqp endpoint" />
+        <valueUri value="amqp://sb.test.nhn.no/NHNTESTServiceBus/8129886_sync" />
+      </example>
+      <example>
+        <label value="ebxml endpoint" />
+        <valueUri value="mailto:mottak-qass@test-es.nav.no" />
+      </example>
+      <example>
+        <label value="REST endpoint" />
+        <valueUri value="https://vkp-dev.portal.azure-api.net" />
+      </example>
+    </element>
+  </differential>
+</StructureDefinition>
