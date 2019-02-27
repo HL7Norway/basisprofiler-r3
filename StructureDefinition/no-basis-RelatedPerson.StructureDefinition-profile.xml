@@ -103,12 +103,13 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <definition value="no-basis: adds slice definitions for three relationship codings from the Norwegian Folkeregisteret.&#xD;&#xA;&#xD;&#xA;The nature of the relationship between a patient and the related person." />
     </element>
     <element id="RelatedPerson.relationship:sivilstand">
       <path value="RelatedPerson.relationship" />
       <sliceName value="sivilstand" />
       <short value="relationship status from Norwegian Person Index" />
-      <definition value="Sivilstand as registered in the norwegian Person Index (folkeregisteret&#xD;&#xA;• uoppgitt (kode i DSF: 0)&#xD;&#xA;• ugift (kode i DSF: 1)&#xD;&#xA;• gift (kode i DSF: 2)&#xD;&#xA;• enkeEllerEnkemann (enke eller enkemann) (kode i DSF: 3)&#xD;&#xA;• skilt (kode i DSF: 4)&#xD;&#xA;• separert (kode i DSF: 5)&#xD;&#xA;• registrertPartner(registrert partner) (kode i DSF: 6)&#xD;&#xA;• separertPartner (separert partner) (kode i DSF: 7)&#xD;&#xA;• skiltPartner (skilt partner) (kode i DSF: 8)&#xD;&#xA;• gjenlevendePartner (gjenlevende partner) (kode i DSF: 9)&#xD;&#xA;" />
+      <definition value="Sivilstand as registered in the norwegian Person Index (folkeregisteret&#xD;&#xA;• uoppgitt (kode i DSF: 0)&#xD;&#xA;• ugift (kode i DSF: 1)&#xD;&#xA;• gift (kode i DSF: 2)&#xD;&#xA;• enkeEllerEnkemann (enke eller enkemann) (kode i DSF: 3)&#xD;&#xA;• skilt (kode i DSF: 4)&#xD;&#xA;• separert (kode i DSF: 5)&#xD;&#xA;• registrertPartner(registrert partner) (kode i DSF: 6)&#xD;&#xA;• separertPartner (separert partner) (kode i DSF: 7)&#xD;&#xA;• skiltPartner (skilt partner) (kode i DSF: 8)&#xD;&#xA;• gjenlevendePartner (gjenlevende partner) (kode i DSF: 9)" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="PatientRelationshipType" />
@@ -123,7 +124,7 @@
       <path value="RelatedPerson.relationship" />
       <sliceName value="familierelasjon" />
       <short value="Family relationship from Norwegian Person Index" />
-      <definition value="Family relationship from Norwegian Person Index&#xD;&#xA;&#xD;&#xA;mor&#xD;&#xA;far&#xD;&#xA;medmor&#xD;&#xA;barn&#xD;&#xA;søsken&#xD;&#xA;ektefelleEllerPartner&#xD;&#xA;dødfødtBarn&#xD;&#xA;" />
+      <definition value="Family relationship from Norwegian Person Index&#xD;&#xA;&#xD;&#xA;mor&#xD;&#xA;far&#xD;&#xA;medmor&#xD;&#xA;barn&#xD;&#xA;søsken&#xD;&#xA;ektefelleEllerPartner&#xD;&#xA;dødfødtBarn" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="PatientRelationshipType" />
