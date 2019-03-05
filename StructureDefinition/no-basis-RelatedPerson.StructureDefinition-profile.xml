@@ -6,7 +6,7 @@
   <name value="no-basis-RelatedPerson" />
   <status value="draft" />
   <date value="2019-01-29" />
-  <description value="Basisprofil for Norwegian RelatedPerson information. Defined by The Norwegian Directorate of eHealth and HL7 Norway. Should be used as a basis for further profiling in use-cases where specific identity information is needed. The basis profile is open, but derived profiles should close down the information elements according to specification relevant to the use-case." />
+  <description value="Basisprofil for Norwegian RelatedPerson information. Defined by The Norwegian Directorate of eHealth and HL7 Norway. Should be used as a basis for further profiling in use-cases where specific identity information is needed. The basis profile is open, but derived profiles should close down the information elements according to specification relevant to the use-case.&#xD;&#xA;&#xD;&#xA;Typical use-case for no-basis-RelatedPerson involves information about relations person-patient.&#xD;&#xA;- Relations registered in norwegian Master Person Information Index (aka Folkeregisteret)&#xD;&#xA;- Other relationship information registered on a patient or person neccessary for patient treatment&#xD;&#xA;- Should not be used for contact persons for the patient with a predefined role in the patient care, as information as this is registered separately in the Patient resource" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -132,21 +132,6 @@
         <strength value="preferred" />
         <valueSetReference>
           <reference value="http://hl7.no/fhir/ValueSet/relatedperson-familierelasjon" />
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="RelatedPerson.relationship:foreldreansvar">
-      <path value="RelatedPerson.relationship" />
-      <sliceName value="foreldreansvar" />
-      <short value="parent child relationship from Norwegian Person Index" />
-      <definition value="parent child relationship from Norwegian Person Index&#xD;&#xA;(FREG modernisert folgeregister)&#xD;&#xA;- felles&#xD;&#xA;- mor&#xD;&#xA;- far&#xD;&#xA;- medmor&#xD;&#xA;- andre&#xD;&#xA;- ukjent" />
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="PatientRelationshipType" />
-        </extension>
-        <strength value="preferred" />
-        <valueSetReference>
-          <reference value="http://hl7.no/fhir/ValueSet/relatedperson-foreldreansvar" />
         </valueSetReference>
       </binding>
     </element>
