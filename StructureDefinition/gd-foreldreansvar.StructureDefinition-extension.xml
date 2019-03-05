@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="gd-foreldreansvar" />
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-foreldreansvar" />
+  <name value="gd-foreldreansvar" />
+  <status value="draft" />
+  <date value="2019-03-04" />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="RelatedPerson" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <alias value="foreldreansvar" />
+      <base>
+        <path value="Element" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
+      </mapping>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:ansvarligOrganisasjon">
+      <path value="Extension.extension" />
+      <sliceName value="ansvarligOrganisasjon" />
+      <short value="The responsible organization" />
+      <definition value="Identity of the organization that has formal responsibility of the child (foreldreansvar). Identified using the organization number from enhetsregisteret." />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="urn:oid:2.16.578.1.12.4.1.2.101" />
+      </binding>
+    </element>
+    <element id="Extension.extension:ansvarligOrganisasjon.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="ansvarligOrganisasjon" />
+    </element>
+    <element id="Extension.extension:ansvarligOrganisasjon.value[x]:valueIdentifier">
+      <path value="Extension.extension.valueIdentifier" />
+      <sliceName value="valueIdentifier" />
+      <short value="The identifier of the organization" />
+      <definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems." />
+      <alias value="organisasjonsnummer" />
+      <type>
+        <code value="Identifier" />
+      </type>
+    </element>
+    <element id="Extension.extension:ansvarligOrganisasjon.value[x]:valueIdentifier.system">
+      <path value="Extension.extension.valueIdentifier.system" />
+      <short value="The namespace for the norwegian organization number" />
+      <definition value="The namespace for the norwegian organization number from Enhetsregisteret." />
+      <min value="1" />
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.2.101" />
+    </element>
+    <element id="Extension.extension:ansvarligOrganisasjon.value[x]:valueIdentifier.value">
+      <path value="Extension.extension.valueIdentifier.value" />
+      <short value="The actual organisasjonsnummer" />
+      <definition value="The actual identifier for the organization that is used to identify the organization across multiple disparate systems." />
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:foreldreansvarType">
+      <path value="Extension.extension" />
+      <sliceName value="foreldreansvarType" />
+      <short value="parent child relationship from Norwegian Master Person Index" />
+      <definition value="parent child relationship from Norwegian Master Person Index&#xD;&#xA;(FREG modernisert folkeregister)" />
+      <alias value="foreldreansvars type" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="http://hl7.no/fhir/ValueSet/relatedperson-foreldreansvar" />
+      </binding>
+    </element>
+    <element id="Extension.extension:foreldreansvarType.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="foreldreansvarType" />
+    </element>
+    <element id="Extension.extension:foreldreansvarType.value[x]:valueCoding">
+      <path value="Extension.extension.valueCoding" />
+      <sliceName value="valueCoding" />
+      <type>
+        <code value="Coding" />
+      </type>
+    </element>
+    <element id="Extension.extension:foreldreansvarType.value[x]:valueCoding.system">
+      <path value="Extension.extension.valueCoding.system" />
+      <min value="1" />
+      <fixedUri value="http://hl7.no/fhir/ValueSet/relatedperson-foreldreansvar" />
+    </element>
+    <element id="Extension.extension:foreldreansvarType.value[x]:valueCoding.code">
+      <path value="Extension.extension.valueCoding.code" />
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:harAnsvarFor">
+      <path value="Extension.extension" />
+      <sliceName value="harAnsvarFor" />
+      <short value="The child subject of parenting responsibilty" />
+      <definition value="The child that is subject of parenting responsibilty, identified by FNR or DNR of the child in question." />
+      <alias value="ansvars subjekt" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:harAnsvarFor.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="harAnsvarFor" />
+    </element>
+    <element id="Extension.extension:harAnsvarFor.value[x]:valueIdentifier">
+      <path value="Extension.extension.valueIdentifier" />
+      <sliceName value="valueIdentifier" />
+      <type>
+        <code value="Identifier" />
+      </type>
+    </element>
+    <element id="Extension.extension:harAnsvarsPerson">
+      <path value="Extension.extension" />
+      <sliceName value="harAnsvarsPerson" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:harAnsvarsPerson.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="harAnsvarsPerson" />
+    </element>
+    <element id="Extension.extension:harAnsvarsPerson.value[x]:valueIdentifier">
+      <path value="Extension.extension.valueIdentifier" />
+      <sliceName value="valueIdentifier" />
+      <type>
+        <code value="Identifier" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-foreldreansvar" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
