@@ -5,6 +5,7 @@
   <name value="gd-foreldreansvar" />
   <status value="draft" />
   <date value="2019-03-04" />
+  <description value="Extension for representing information regarding parental responsibility parent-child or child-parent. Represents the same information awailable in the Norwegian Folkeregister." />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
