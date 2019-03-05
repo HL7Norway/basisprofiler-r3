@@ -120,7 +120,7 @@
       <path value="Extension.extension" />
       <sliceName value="harAnsvarFor" />
       <short value="The child subject of parenting responsibilty" />
-      <definition value="The child that is subject of parenting responsibilty, identified by FNR or DNR of the child in question." />
+      <definition value="The child that is subject of parenting responsibilty, identified by FNR or DNR of the child in question" />
       <alias value="ansvars subjekt" />
       <max value="1" />
     </element>
