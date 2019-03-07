@@ -24,6 +24,7 @@
     </element>
     <element id="HealthcareService.providedBy">
       <path value="HealthcareService.providedBy" />
+      <definition value="The organization that provides this healthcare service.&#xD;&#xA;&#xD;&#xA;no-basis recommends the use of logical reference to an organization using ENH or RSH. To describe a top level organization. Departments within an organization should use a different reference scheme defined by the organization." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
@@ -32,6 +33,46 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Organization" />
       </type>
+    </element>
+    <element id="HealthcareService.providedBy.identifier">
+      <path value="HealthcareService.providedBy.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type.coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="HealthcareService.providedBy.identifier:ENH">
+      <path value="HealthcareService.providedBy.identifier" />
+      <sliceName value="ENH" />
+      <short value="Organisasjonsnummer from Enhetsregisteret" />
+      <alias value="organisasjonsnummer" />
+      <alias value="organization number" />
+    </element>
+    <element id="HealthcareService.providedBy.identifier:ENH.system">
+      <path value="HealthcareService.providedBy.identifier.system" />
+      <min value="1" />
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.2.101" />
+    </element>
+    <element id="HealthcareService.providedBy.identifier:ENH.value">
+      <path value="HealthcareService.providedBy.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.providedBy.identifier:RSH">
+      <path value="HealthcareService.providedBy.identifier" />
+      <sliceName value="RSH" />
+      <short value="Nasjonalt register over enheter i spesialisthelsetjenesten (RESH-ID)" />
+    </element>
+    <element id="HealthcareService.providedBy.identifier:RSH.system">
+      <path value="HealthcareService.providedBy.identifier.system" />
+      <min value="1" />
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.2.102" />
+    </element>
+    <element id="HealthcareService.providedBy.identifier:RSH.value">
+      <path value="HealthcareService.providedBy.identifier.value" />
+      <min value="1" />
     </element>
     <element id="HealthcareService.category">
       <path value="HealthcareService.category" />
