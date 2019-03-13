@@ -14,6 +14,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Location" />
   <derivation value="constraint" />
   <differential>
+    <element id="Location">
+      <path value="Location" />
+      <definition value="Details and position information for a physical place where services are provided  and resources and participants may be stored, found, contained or &#xD;&#xA;accommodated.&#xD;&#xA;&#xD;&#xA;no-basis: The use-case for no-basis-Location is representation of organization structure to describe where a specific department or healthcare service is offered." />
+    </element>
     <element id="Location.address">
       <path value="Location.address" />
       <type>
@@ -21,7 +25,7 @@
         <profile value="http://hl7.no/fhir/StructureDefinition/no-basis-Address" />
       </type>
     </element>
-     <element id="Location.managingOrganization">
+    <element id="Location.managingOrganization">
       <path value="Location.managingOrganization" />
       <type>
         <code value="Reference" />
@@ -32,7 +36,7 @@
         <targetProfile value="http://hl7.no/fhir/StructureDefinition/no-basis-Organization" />
       </type>
     </element>
-     <element id="Location.partOf">
+    <element id="Location.partOf">
       <path value="Location.partOf" />
       <type>
         <code value="Reference" />
