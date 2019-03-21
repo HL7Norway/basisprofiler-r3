@@ -62,8 +62,8 @@
     </element>
     <element id="PractitionerRole.code:functions.coding.system">
       <path value="PractitionerRole.code.coding.system" />
-      <short value="Identity of the Helsepersonellregisterets (HPR) klassifikasjon av spesialiteter (OID=7426)" />
-      <definition value="The identification of the code system Helsepersonellregisterets (HPR) klassifikasjon av spesialiteter (OID=7426)" />
+      <short value="Identity of the Helsepersonellregisterets (HPR) klassifikasjon av spesialiteter (OID=9034)" />
+      <definition value="The identification of the code system Helsepersonellregisterets (HPR) klassifikasjon av spesialiteter (OID=9034)" />
       <min value="1" />
       <fixedUri value="urn:oid:2.16.578.1.12.4.1.1.9034" />
     </element>
@@ -80,13 +80,13 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <definition value="no-basis: code related to Practitioner speciality&#xD;&#xA;&#xD;&#xA;Specific specialty of the practitioner." />
+      <definition value="no-basis: code related to a speciality that the Practitioner can perform in the role within an organization&#xD;&#xA;&#xD;&#xA;Specific specialty of the practitioner." />
     </element>
     <element id="PractitionerRole.specialty:discipline">
       <path value="PractitionerRole.specialty" />
       <sliceName value="discipline" />
       <short value="Specific discipline of practitioner" />
-      <definition value="The Discipline the practitioner operates within the organization.&#xD;&#xA;" />
+      <definition value="The Discipline the practitioner operates within the organization." />
       <alias value="fagområde" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -100,7 +100,7 @@
     <element id="PractitionerRole.specialty:discipline.coding.system">
       <path value="PractitionerRole.specialty.coding.system" />
       <short value="The identification of the code system" />
-      <definition value="The identification of the code system Fagområde (OID=8451)&#xD;&#xA;" />
+      <definition value="The identification of the code system Fagområde (OID=8451)" />
       <alias value="Fagområde" />
       <min value="1" />
       <fixedUri value="urn:oid:2.16.578.1.12.4.1.1.8451" />
