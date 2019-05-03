@@ -1442,7 +1442,7 @@
         <rules value="open" />
       </slicing>
       <short value="The nature of the relationship" />
-      <definition value="no-basis: adds slice definitions for three relationship codings from the Norwegian Folkeregisteret.&#xD;&#xA;&#xD;&#xA;The nature of the relationship between a patient and the related person." />
+      <definition value="no-basis: adds slice definitions for three relationship codings from the Norwegian Folkeregisteret.&#xD;&#xA;Some relationships are ordered (a person is a parent of a child, the child on the other hand has a parent). Ordered relationships is always expressed from the RelatedPerson instance to the Patient/Person instance referenced in the RelatedPerson.patient element. This will usually be the EXACT OPPOSITE of the actual data recorded in FREG, as relationships in FREG is recorded with the view from the Person to the RelatedPersons.&#xD;&#xA;&#xD;&#xA;The nature of the relationship between a patient and the related person." />
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
       <requirements value="We need to know the relationship with the patient since it influences the interpretation of the information attributed to this person." />
       <min value="0" />
@@ -1639,7 +1639,7 @@
       <path value="RelatedPerson.relationship" />
       <sliceName value="parental" />
       <short value="Parental responsibility registered in Norwegian person index" />
-      <definition value="Parental responsibility registered in Norwegian person index&#xD;&#xA;&#xD;&#xA;barnet har krav på omsut og omtanke frå dei som har foreldreansvaret. Dei har rett og plikt til å ta avgjerder for barnet i personlege tilhøve innanfor dei grensene som §§ 31 til 33 set. Foreldreansvaret skal utøvast ut frå barnet sine interesser og behov. Dei som har foreldreansvaret, er skyldige til å gje barnet forsvarleg oppseding og forsyting. Dei skal syte for at barnet får utdanning etter evne og givnad&#xD;&#xA;Inneholder hvem som evt. har foreldremyndighet for en umyndig person.&#xD;&#xA;foreldremyndighet = myndighet til å inneha og utøve et foreldreansvar&#xD;&#xA;&#xD;&#xA;Kodeverdier i Registeret i Freg:&#xD;&#xA;- felles&#xD;&#xA;- mor&#xD;&#xA;- far&#xD;&#xA;- medmor&#xD;&#xA;- andre&#xD;&#xA;- ukjent&#xD;&#xA;I Registeret vil ansvaret bli vist som en to-veis relasjon vha. identifikatorer eller identifiserende informasjon.&#xD;&#xA;De gjeldende relasjonene til personer/barnevernsnemnd o.l. vil i praksis opphøre når personen ikke lenger er underlagt foreldreansvar, men de vil ikke opphøre i Registeret.&#xD;&#xA;Når informasjonen er migrert fra DSF vil Registeret være oppdatert i takt med DSF.&#xD;&#xA;" />
+      <definition value="Parental responsibility registered in Norwegian person index&#xD;&#xA;&#xD;&#xA;barnet har krav på omsut og omtanke frå dei som har foreldreansvaret. Dei har rett og plikt til å ta avgjerder for barnet i personlege tilhøve innanfor dei grensene som §§ 31 til 33 set. Foreldreansvaret skal utøvast ut frå barnet sine interesser og behov. Dei som har foreldreansvaret, er skyldige til å gje barnet forsvarleg oppseding og forsyting. Dei skal syte for at barnet får utdanning etter evne og givnad&#xD;&#xA;Inneholder hvem som evt. har foreldremyndighet for en umyndig person.&#xD;&#xA;foreldremyndighet = myndighet til å inneha og utøve et foreldreansvar&#xD;&#xA;&#xD;&#xA;Kodeverdier i Registeret i Freg:&#xD;&#xA;- felles&#xD;&#xA;- mor&#xD;&#xA;- far&#xD;&#xA;- medmor&#xD;&#xA;- andre&#xD;&#xA;- ukjent&#xD;&#xA;I Registeret vil ansvaret bli vist som en to-veis relasjon vha. identifikatorer eller identifiserende informasjon.&#xD;&#xA;De gjeldende relasjonene til personer/barnevernsnemnd o.l. vil i praksis opphøre når personen ikke lenger er underlagt foreldreansvar, men de vil ikke opphøre i Registeret.&#xD;&#xA;Når informasjonen er migrert fra DSF vil Registeret være oppdatert i takt med DSF." />
       <comment value="Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
       <requirements value="We need to know the relationship with the patient since it influences the interpretation of the information attributed to this person." />
       <alias value="foreldreansvar" />
@@ -1882,10 +1882,21 @@
         <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
+      <constraint>
+        <key value="ext-1" />
+        <severity value="error" />
+        <human value="Must have either extensions or value[x], not both" />
+        <expression value="extension.exists() != value.exists()" />
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
+      </constraint>
       <isSummary value="true" />
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="N/A" />
       </mapping>
       <mapping>
         <identity value="rim" />
@@ -2137,7 +2148,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <definition value="no-basis: adds slice definitions for three relationship codings from the Norwegian Folkeregisteret.&#xD;&#xA;&#xD;&#xA;The nature of the relationship between a patient and the related person." />
+      <definition value="no-basis: adds slice definitions for three relationship codings from the Norwegian Folkeregisteret.&#xD;&#xA;Some relationships are ordered (a person is a parent of a child, the child on the other hand has a parent). Ordered relationships is always expressed from the RelatedPerson instance to the Patient/Person instance referenced in the RelatedPerson.patient element. This will usually be the EXACT OPPOSITE of the actual data recorded in FREG, as relationships in FREG is recorded with the view from the Person to the RelatedPersons.&#xD;&#xA;&#xD;&#xA;The nature of the relationship between a patient and the related person." />
     </element>
     <element id="RelatedPerson.relationship:maritalStatus">
       <path value="RelatedPerson.relationship" />
@@ -2175,7 +2186,7 @@
       <path value="RelatedPerson.relationship" />
       <sliceName value="parental" />
       <short value="Parental responsibility registered in Norwegian person index" />
-      <definition value="Parental responsibility registered in Norwegian person index&#xD;&#xA;&#xD;&#xA;barnet har krav på omsut og omtanke frå dei som har foreldreansvaret. Dei har rett og plikt til å ta avgjerder for barnet i personlege tilhøve innanfor dei grensene som §§ 31 til 33 set. Foreldreansvaret skal utøvast ut frå barnet sine interesser og behov. Dei som har foreldreansvaret, er skyldige til å gje barnet forsvarleg oppseding og forsyting. Dei skal syte for at barnet får utdanning etter evne og givnad&#xD;&#xA;Inneholder hvem som evt. har foreldremyndighet for en umyndig person.&#xD;&#xA;foreldremyndighet = myndighet til å inneha og utøve et foreldreansvar&#xD;&#xA;&#xD;&#xA;Kodeverdier i Registeret i Freg:&#xD;&#xA;- felles&#xD;&#xA;- mor&#xD;&#xA;- far&#xD;&#xA;- medmor&#xD;&#xA;- andre&#xD;&#xA;- ukjent&#xD;&#xA;I Registeret vil ansvaret bli vist som en to-veis relasjon vha. identifikatorer eller identifiserende informasjon.&#xD;&#xA;De gjeldende relasjonene til personer/barnevernsnemnd o.l. vil i praksis opphøre når personen ikke lenger er underlagt foreldreansvar, men de vil ikke opphøre i Registeret.&#xD;&#xA;Når informasjonen er migrert fra DSF vil Registeret være oppdatert i takt med DSF.&#xD;&#xA;" />
+      <definition value="Parental responsibility registered in Norwegian person index&#xD;&#xA;&#xD;&#xA;barnet har krav på omsut og omtanke frå dei som har foreldreansvaret. Dei har rett og plikt til å ta avgjerder for barnet i personlege tilhøve innanfor dei grensene som §§ 31 til 33 set. Foreldreansvaret skal utøvast ut frå barnet sine interesser og behov. Dei som har foreldreansvaret, er skyldige til å gje barnet forsvarleg oppseding og forsyting. Dei skal syte for at barnet får utdanning etter evne og givnad&#xD;&#xA;Inneholder hvem som evt. har foreldremyndighet for en umyndig person.&#xD;&#xA;foreldremyndighet = myndighet til å inneha og utøve et foreldreansvar&#xD;&#xA;&#xD;&#xA;Kodeverdier i Registeret i Freg:&#xD;&#xA;- felles&#xD;&#xA;- mor&#xD;&#xA;- far&#xD;&#xA;- medmor&#xD;&#xA;- andre&#xD;&#xA;- ukjent&#xD;&#xA;I Registeret vil ansvaret bli vist som en to-veis relasjon vha. identifikatorer eller identifiserende informasjon.&#xD;&#xA;De gjeldende relasjonene til personer/barnevernsnemnd o.l. vil i praksis opphøre når personen ikke lenger er underlagt foreldreansvar, men de vil ikke opphøre i Registeret.&#xD;&#xA;Når informasjonen er migrert fra DSF vil Registeret være oppdatert i takt med DSF." />
       <alias value="foreldreansvar" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
