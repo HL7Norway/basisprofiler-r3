@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/GitRepo/FHIR/STU3/fhir-all-xsd/fhir-single.xsd">
-	<id value="no-basis-maritalstatus-v05.codesystem" />
+	<id value="no-basis-marital-status.codesystem" />
     <meta>
         <versionId value="1" />
-        <lastUpdated value="2019-02-27T00:00:00+00:00" />
+        <lastUpdated value="2019-05-07T00:00:00+00:00" />
     </meta>
-    <url value="http://ehelse.no/fhir/CodeSystem/no-basis-maritalstatus-v05.codesystem" />
+    <url value="http://hl7.no/fhir/CodeSystem/no-basis-marital-status" />
     <version value="0.5" />
-    <name value="no-basis-maritalstatus-v05.codesystem" />
+    <name value="no-basis-marital-status.codesystem" />
     <status value="draft" /> 
-    <date value="2019-02-27T00:00:00+00:00" />
+    <date value="2019-05-07T00:00:00+00:00" />
     <publisher value="Copy of Codes from Sivilstandstype defined by Skatteetaten" />
     <content value="complete" />
     <concept>
