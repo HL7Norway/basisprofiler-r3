@@ -7,6 +7,8 @@ Profilene skal være såkalte basisprofiler for Norge, som er minstekrav. Disse 
 
 Se [prinsipper for basisprofiler i wiki'en](https://github.com/HL7Norway/best-practice/wiki/Prinsipper-for-basisprofiler).
 
+Disse profilene vil ikke bli videreutviklet. Se [basisprofiler R4](https://github.com/HL7Norway/basisprofiler-r4).
+
 ## Ferdige profiler
 
 Følgende profiler er ferdige og venter på endelig godkjenning og endring av status fra "draft" til "final":
