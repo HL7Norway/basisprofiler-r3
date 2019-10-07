@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-basis-RelatedPerson" />
   <url value="http://hl7.no/fhir/StructureDefinition/no-basis-RelatedPerson" />
-  <version value="0.1" />
+  <version value="1.0.3" />
   <name value="no-basis-RelatedPerson" />
   <status value="draft" />
   <date value="2019-01-29" />
@@ -375,7 +375,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="type.coding.system" />
+          <path value="system" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -1531,9 +1531,6 @@
       </constraint>
       <isSummary value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="PatientRelationshipType" />
-        </extension>
         <strength value="preferred" />
         <description value="The nature of the relationship between a patient and the related person" />
         <valueSetReference>
@@ -1598,9 +1595,6 @@
       </constraint>
       <isSummary value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="PatientRelationshipType" />
-        </extension>
         <strength value="preferred" />
         <description value="The nature of the relationship between a patient and the related person" />
         <valueSetReference>
@@ -1664,9 +1658,6 @@
       </constraint>
       <isSummary value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="PatientRelationshipType" />
-        </extension>
         <strength value="preferred" />
         <description value="The nature of the relationship between a patient and the related person" />
         <valueSetReference>
@@ -2054,7 +2045,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="type.coding.system" />
+          <path value="system" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -2147,9 +2138,6 @@
       <definition value="Sivilstand as registered in the norwegian Person Index (folkeregisteret). &#xD;&#xA;&#xD;&#xA;• uoppgitt (kode i DSF: 0)&#xD;&#xA;• ugift (kode i DSF: 1)&#xD;&#xA;• gift (kode i DSF: 2)&#xD;&#xA;• enkeEllerEnkemann (enke eller enkemann) (kode i DSF: 3)&#xD;&#xA;• skilt (kode i DSF: 4)&#xD;&#xA;• separert (kode i DSF: 5)&#xD;&#xA;• registrertPartner(registrert partner) (kode i DSF: 6)&#xD;&#xA;• separertPartner (separert partner) (kode i DSF: 7)&#xD;&#xA;• skiltPartner (skilt partner) (kode i DSF: 8)&#xD;&#xA;• gjenlevendePartner (gjenlevende partner) (kode i DSF: 9)" />
       <alias value="sivilstand" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="PatientRelationshipType" />
-        </extension>
         <strength value="preferred" />
         <valueSetReference>
           <reference value="http://hl7.no/fhir/ValueSet/no-basis-marital-status" />
@@ -2164,9 +2152,6 @@
       <alias value="familierelasjon" />
       <alias value="relatertPersonsRolle" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="PatientRelationshipType" />
-        </extension>
         <strength value="preferred" />
         <valueSetReference>
           <reference value="http://hl7.no/fhir/ValueSet/no-basis-family-relation" />
@@ -2180,9 +2165,6 @@
       <definition value="Parental responsibility registered in Norwegian person index.&#xD;&#xA;&#xD;&#xA;barnet har krav på omsut og omtanke frå dei som har foreldreansvaret. Dei har rett og plikt til å ta avgjerder for barnet i personlege tilhøve innanfor dei grensene som §§ 31 til 33 set. Foreldreansvaret skal utøvast ut frå barnet sine interesser og behov. Dei som har foreldreansvaret, er skyldige til å gje barnet forsvarleg oppseding og forsyting. Dei skal syte for at barnet får utdanning etter evne og givnad&#xD;&#xA;Inneholder hvem som evt. har foreldremyndighet for en umyndig person.&#xD;&#xA;foreldremyndighet = myndighet til å inneha og utøve et foreldreansvar&#xD;&#xA;&#xD;&#xA;Kodeverdier i Registeret i Freg:&#xD;&#xA;- felles&#xD;&#xA;- mor&#xD;&#xA;- far&#xD;&#xA;- medmor&#xD;&#xA;- andre&#xD;&#xA;- ukjent&#xD;&#xA;I Registeret vil ansvaret bli vist som en to-veis relasjon vha. identifikatorer eller identifiserende informasjon.&#xD;&#xA;De gjeldende relasjonene til personer/barnevernsnemnd o.l. vil i praksis opphøre når personen ikke lenger er underlagt foreldreansvar, men de vil ikke opphøre i Registeret.&#xD;&#xA;Når informasjonen er migrert fra DSF vil Registeret være oppdatert i takt med DSF." />
       <alias value="foreldreansvar" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="PatientRelationshipType" />
-        </extension>
         <strength value="preferred" />
         <valueSetReference>
           <reference value="http://hl7.no/fhir/ValueSet/no-basis-parental-responsibility" />

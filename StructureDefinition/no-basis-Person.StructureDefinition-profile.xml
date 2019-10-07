@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="no-basis-Person" />
   <url value="http://hl7.no/fhir/StructureDefinition/no-basis-Person" />
-  <version value="0.2" />
+  <version value="1.0.3" />
   <name value="no-basis-Person" />
   <status value="draft" />
   <date value="2019-02-19" />
@@ -376,7 +376,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="type.coding.system" />
+          <path value="system" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -1973,7 +1973,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="type.coding.system" />
+          <path value="system" />
         </discriminator>
         <rules value="open" />
       </slicing>
